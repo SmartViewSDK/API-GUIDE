@@ -1,0 +1,75 @@
+ChannelClient.swift
+	public func == (lhs: ChannelClient, rhs: ChannelClient) -> Bool
+Message.swift
+	public static let PROPERTY_OS = "os"
+	public static let PROPERTY_LIBRARY = "library"
+	public static let PROPERTY_VERSION = "version"
+MediaPlayer.swift
+	@objc public protocol MediaPlayerDelegate: class
+	optional func onConnect(error: NSError?)
+	optional func onDisconnect(error: NSError?)
+	@objc public class MediaPlayer: NSObject
+	public static let PlayerStateKey = "state"
+	public static let VideoStateKey = "Video State"
+	public static let ErrorKey = "error"
+	public static let Play = "play"
+	public static let Pause = "pause"
+	public static let Stop = "stop"
+	public static let Mute = "mute"
+	public static let Unmute = "unMute"
+	public static let FF = "ff"
+	public static let RWD = "rwd"
+	public static let SeekTo = "seekTo"
+	public static let SetVolume = "setVolume"
+	public static let StreamCompleted = "streamcompleted"
+	public static let CurrentPlayTime = "currentplaytime"
+	public static let TotalDuration = "totalduration"
+	public static let BufferingStart = "bufferingstart"
+	public static let BufferingProgress = "bufferingprogress"
+	public static let BufferingComplete = "bufferingcomplete"
+	public static let VideoIsCued = "Video is cued"
+	public private(set) var service: Service
+	public private(set) var connected: Bool = false
+	public weak var delegate: MediaPlayerDelegate? = nil
+	public func connect(completionHandler: ((error: NSError?) -> Void)? = nil)
+	public func disconnect(completionHandler: ((error: NSError?) -> Void)? = nil)
+	public func playContent(contentURL: NSURL, completionHandler: ((NSError?) -> Void)? = nil)
+	@objc public class MediaPlayer : NSObject
+	public func onMessage(message: Message)
+	public func onConnect(client: ChannelClient?, error: NSError?)
+	public func onDisconnect(client: ChannelClient?, error: NSError?)
+Channel.swift
+	case All = "all"
+	case Host = "host"
+	case Broadcast = "broadcast"
+	case Connect = "ms.channel.connect"
+	case Disconnect = "ms.channel.disconnect"
+	case ClientConnect = "ms.channel.clientConnect"
+	case ClientDisconnect = "ms.channel.clientDisconnect"
+	case Message = "ms.channel.message"
+	case Data = "ms.channel.data"
+	case Unauthorized = "ms.channel.unauthorized"
+	case Timeout = "ms.channel.timeOut"
+	case Error = "ms.error"
+	case Ready = "ms.channel.ready"
+	case Ping = "ms:channel.ping"
+	public override var description: String
+ServiceSearch.swift
+	public let MSDidFindService = "ms.didFindService"
+	public let MSDidRemoveService = "ms.didRemoveService"
+	public let MSDidStopSearch = "ms.stopSearch"
+	public let MSDidStartSearch = "ms.startSearch"
+	public let MSDidFoundUsingBLE = "ms.didFoundUsingBLE"
+	@objc public enum ServiceSearchDiscoveryType: Int
+	case LAN
+	case CLOUD
+	public func getServices() -> [Service]
+	public func isSearchingBLE() -> Bool
+Service.swift
+	public internal(set) var discoveryType = ServiceSearchDiscoveryType.LAN
+	public func createMediaPlayer() -> MediaPlayer
+	public func == (lhs: Service, rhs: Service) -> Bool
+Application.swift
+	public private(set) var args: [String:AnyObject]? = nil
+	public static let BUNDLE_IDENTIFIER = "com.samsung.sta.multiscreen.MSF"
+	public static let PROPERTY_VALUE_LIBRARY = "IOS SDK";
