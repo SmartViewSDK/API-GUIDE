@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 <title>Uses of Interface com.samsung.multiscreen.Result (Samsung SmartView Android SDK)</title>
 <link rel="stylesheet" type="text/css" href="../../../../styles.css" title="Style">
 </head>
@@ -82,7 +82,9 @@
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">Application.</span><code><strong><a href="../../../../com/samsung/multiscreen/Application.html#connect(java.util.Map,%20com.samsung.multiscreen.Result)">connect</a></strong>(<a href="http://d.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;attributes,
-       <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>&nbsp;</td>
+       <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>
+<div class="block">Connect to the specified channel.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -93,21 +95,8 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MediaPlayer.</span><code><strong><a href="../../../../com/samsung/multiscreen/MediaPlayer.html#connect(java.util.Map,%20com.samsung.multiscreen.Result)">connect</a></strong>(<a href="http://d.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;attributes,
-       <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;connectCallback)</code>
-<div class="block">Connect to the Media Player.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">Channel.</span><code><strong><a href="../../../../com/samsung/multiscreen/Channel.html#connect(com.samsung.multiscreen.Result)">connect</a></strong>(<a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>
 <div class="block">Connect to the specified channel.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MediaPlayer.</span><code><strong><a href="../../../../com/samsung/multiscreen/MediaPlayer.html#connect(com.samsung.multiscreen.Result)">connect</a></strong>(<a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>
-<div class="block">Connect to the specified Media Player.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -119,7 +108,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MediaPlayer.</span><code><strong><a href="../../../../com/samsung/multiscreen/MediaPlayer.html#disconnect(boolean,%20com.samsung.multiscreen.Result)">disconnect</a></strong>(boolean&nbsp;stopOnDisconnect,
+<td class="colLast"><span class="strong">Player.</span><code><strong><a href="../../../../com/samsung/multiscreen/Player.html#disconnect(boolean,%20com.samsung.multiscreen.Result)">disconnect</a></strong>(boolean&nbsp;stopOnDisconnect,
           <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>
 <div class="block">Disconnect from the media player.</div>
 </td>
@@ -136,7 +125,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MediaPlayer.</span><code><strong><a href="../../../../com/samsung/multiscreen/MediaPlayer.html#disconnect(com.samsung.multiscreen.Result)">disconnect</a></strong>(<a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>
+<td class="colLast"><span class="strong">Player.</span><code><strong><a href="../../../../com/samsung/multiscreen/Player.html#disconnect(com.samsung.multiscreen.Result)">disconnect</a></strong>(<a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>
 <div class="block">Disconnect from the specified channel.</div>
 </td>
 </tr>
@@ -183,9 +172,69 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MediaPlayer.</span><code><strong><a href="../../../../com/samsung/multiscreen/MediaPlayer.html#playContent(android.net.Uri,%20com.samsung.multiscreen.Result)">playContent</a></strong>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri,
+<td class="colLast"><span class="strong">AudioPlayer.</span><code><strong><a href="../../../../com/samsung/multiscreen/AudioPlayer.html#playContent(android.net.Uri,%20com.samsung.multiscreen.Result)">playContent</a></strong>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
            <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
-<div class="block">public API to play content of Media Player</div>
+<div class="block">public API to play audio content</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PhotoPlayer.</span><code><strong><a href="../../../../com/samsung/multiscreen/PhotoPlayer.html#playContent(android.net.Uri,%20com.samsung.multiscreen.Result)">playContent</a></strong>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
+           <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">public API to play photo content</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">VideoPlayer.</span><code><strong><a href="../../../../com/samsung/multiscreen/VideoPlayer.html#playContent(android.net.Uri,%20com.samsung.multiscreen.Result)">playContent</a></strong>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
+           <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">public API to play video content</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">PhotoPlayer.</span><code><strong><a href="../../../../com/samsung/multiscreen/PhotoPlayer.html#playContent(android.net.Uri,%20java.lang.String,%20com.samsung.multiscreen.Result)">playContent</a></strong>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
+           <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;title,
+           <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">public API to play photo content</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">AudioPlayer.</span><code><strong><a href="../../../../com/samsung/multiscreen/AudioPlayer.html#playContent(android.net.Uri,%20java.lang.String,%20java.lang.String,%20android.net.Uri,%20com.samsung.multiscreen.Result)">playContent</a></strong>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
+           <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;title,
+           <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;albumName,
+           <a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;albumArtUrl,
+           <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">public API to play audio content</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">VideoPlayer.</span><code><strong><a href="../../../../com/samsung/multiscreen/VideoPlayer.html#playContent(android.net.Uri,%20java.lang.String,%20android.net.Uri,%20com.samsung.multiscreen.Result)">playContent</a></strong>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
+           <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;title,
+           <a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;thumbnailUrl,
+           <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">public API to play video content</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">Channel.</span><code><strong><a href="../../../../com/samsung/multiscreen/Channel.html#setSecurityMode(boolean,%20com.samsung.multiscreen.Result)">setSecurityMode</a></strong>(boolean&nbsp;securityMode,
+               <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">Set security mode status to for web socket connection or rest API</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">Application.</span><code><strong><a href="../../../../com/samsung/multiscreen/Application.html#start(com.samsung.multiscreen.Result)">start</a></strong>(<a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">Start or launch the specified application.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">Application.</span><code><strong><a href="../../../../com/samsung/multiscreen/Application.html#stop(com.samsung.multiscreen.Result)">stop</a></strong>(<a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">Stop the specified application.</div>
 </td>
 </tr>
 <tr class="rowColor">

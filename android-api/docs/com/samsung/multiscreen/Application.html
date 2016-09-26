@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 <title>Application (Samsung SmartView Android SDK)</title>
 <link rel="stylesheet" type="text/css" href="../../../styles.css" title="Style">
 </head>
@@ -223,6 +223,18 @@ extends <a href="../../../com/samsung/multiscreen/Channel.html" title="class in 
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Application.html#start(com.samsung.multiscreen.Result)">start</a></strong>(<a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">Start or launch the specified application.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Application.html#stop(com.samsung.multiscreen.Result)">stop</a></strong>(<a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">Stop the specified application.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Application.html#toString()">toString</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -232,7 +244,7 @@ extends <a href="../../../com/samsung/multiscreen/Channel.html" title="class in 
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;com.samsung.multiscreen.<a href="../../../com/samsung/multiscreen/Channel.html" title="class in com.samsung.multiscreen">Channel</a></h3>
-<code><a href="../../../com/samsung/multiscreen/Channel.html#addOnMessageListener(java.lang.String,%20com.samsung.multiscreen.Channel.OnMessageListener)">addOnMessageListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#connect()">connect</a>, <a href="../../../com/samsung/multiscreen/Channel.html#connect(com.samsung.multiscreen.Result)">connect</a>, <a href="../../../com/samsung/multiscreen/Channel.html#getClients()">getClients</a>, <a href="../../../com/samsung/multiscreen/Channel.html#getId()">getId</a>, <a href="../../../com/samsung/multiscreen/Channel.html#getUri()">getUri</a>, <a href="../../../com/samsung/multiscreen/Channel.html#isDebug()">isDebug</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object)">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20byte[])">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20com.samsung.multiscreen.Client)">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20com.samsung.multiscreen.Client,%20byte[])">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20java.util.List)">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20java.util.List,%20byte[])">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20java.lang.String)">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20java.lang.String,%20byte[])">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#removeAllListeners()">removeAllListeners</a>, <a href="../../../com/samsung/multiscreen/Channel.html#removeOnMessageListener(java.lang.String,%20com.samsung.multiscreen.Channel.OnMessageListener)">removeOnMessageListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#removeOnMessageListeners()">removeOnMessageListeners</a>, <a href="../../../com/samsung/multiscreen/Channel.html#removeOnMessageListeners(java.lang.String)">removeOnMessageListeners</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setConnectionTimeout(int)">setConnectionTimeout</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setDebug(boolean)">setDebug</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setOnClientConnectListener(com.samsung.multiscreen.Channel.OnClientConnectListener)">setOnClientConnectListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setOnClientDisconnectListener(com.samsung.multiscreen.Channel.OnClientDisconnectListener)">setOnClientDisconnectListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setOnDisconnectListener(com.samsung.multiscreen.Channel.OnDisconnectListener)">setOnDisconnectListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setOnErrorListener(com.samsung.multiscreen.Channel.OnErrorListener)">setOnErrorListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setOnReadyListener(com.samsung.multiscreen.Channel.OnReadyListener)">setOnReadyListener</a></code></li>
+<code><a href="../../../com/samsung/multiscreen/Channel.html#addOnMessageListener(java.lang.String,%20com.samsung.multiscreen.Channel.OnMessageListener)">addOnMessageListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#connect()">connect</a>, <a href="../../../com/samsung/multiscreen/Channel.html#connect(com.samsung.multiscreen.Result)">connect</a>, <a href="../../../com/samsung/multiscreen/Channel.html#getClients()">getClients</a>, <a href="../../../com/samsung/multiscreen/Channel.html#getId()">getId</a>, <a href="../../../com/samsung/multiscreen/Channel.html#getUri()">getUri</a>, <a href="../../../com/samsung/multiscreen/Channel.html#isDebug()">isDebug</a>, <a href="../../../com/samsung/multiscreen/Channel.html#isSecurityMode()">isSecurityMode</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object)">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20byte[])">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20com.samsung.multiscreen.Client)">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20com.samsung.multiscreen.Client,%20byte[])">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20java.util.List)">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20java.util.List,%20byte[])">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20java.lang.String)">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20java.lang.String,%20byte[])">publish</a>, <a href="../../../com/samsung/multiscreen/Channel.html#removeAllListeners()">removeAllListeners</a>, <a href="../../../com/samsung/multiscreen/Channel.html#removeOnMessageListener(java.lang.String,%20com.samsung.multiscreen.Channel.OnMessageListener)">removeOnMessageListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#removeOnMessageListeners()">removeOnMessageListeners</a>, <a href="../../../com/samsung/multiscreen/Channel.html#removeOnMessageListeners(java.lang.String)">removeOnMessageListeners</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setConnectionTimeout(int)">setConnectionTimeout</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setDebug(boolean)">setDebug</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setOnClientConnectListener(com.samsung.multiscreen.Channel.OnClientConnectListener)">setOnClientConnectListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setOnClientDisconnectListener(com.samsung.multiscreen.Channel.OnClientDisconnectListener)">setOnClientDisconnectListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setOnDisconnectListener(com.samsung.multiscreen.Channel.OnDisconnectListener)">setOnDisconnectListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setOnErrorListener(com.samsung.multiscreen.Channel.OnErrorListener)">setOnErrorListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setOnReadyListener(com.samsung.multiscreen.Channel.OnReadyListener)">setOnReadyListener</a>, <a href="../../../com/samsung/multiscreen/Channel.html#setSecurityMode(boolean,%20com.samsung.multiscreen.Result)">setSecurityMode</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -320,6 +332,30 @@ extends <a href="../../../com/samsung/multiscreen/Channel.html" title="class in 
  <a href="../../../com/samsung/multiscreen/ApplicationInfo.html" title="class in com.samsung.multiscreen"><code>ApplicationInfo</code></a></dd></dl>
 </li>
 </ul>
+<a name="start(com.samsung.multiscreen.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>start</h4>
+<pre>public&nbsp;void&nbsp;start(<a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</pre>
+<div class="block">Start or launch the specified application.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>result</code> - the asynchronous callback to invoke with the result of 
+ starting the application</dd></dl>
+</li>
+</ul>
+<a name="stop(com.samsung.multiscreen.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stop</h4>
+<pre>public&nbsp;void&nbsp;stop(<a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</pre>
+<div class="block">Stop the specified application.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>result</code> - the asynchronous callback to invoke with the result of 
+ stopping the application</dd></dl>
+</li>
+</ul>
 <a name="install(com.samsung.multiscreen.Result)">
 <!--   -->
 </a>
@@ -341,7 +377,6 @@ extends <a href="../../../com/samsung/multiscreen/Channel.html" title="class in 
 <h4>connect</h4>
 <pre>public&nbsp;void&nbsp;connect(<a href="http://d.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;attributes,
            <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</pre>
-<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../com/samsung/multiscreen/Channel.html#connect(java.util.Map,%20com.samsung.multiscreen.Result)">Channel</a></code></strong></div>
 <div class="block">Connect to the specified channel.</div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
@@ -413,12 +448,12 @@ extends <a href="../../../com/samsung/multiscreen/Channel.html" title="class in 
 <h4>setOnConnectListener</h4>
 <pre>public&nbsp;void&nbsp;setOnConnectListener(<a href="../../../com/samsung/multiscreen/Channel.OnConnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnConnectListener</a>&nbsp;onConnectListener)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../com/samsung/multiscreen/Channel.html#setOnConnectListener(com.samsung.multiscreen.Channel.OnConnectListener)">Channel</a></code></strong></div>
-<div class="block">Set the listener for connect events. Setting the parameter to 
+<div class="block">Set the listener for connect events. Setting the parameter to
  <code>null</code> will remove the listener.</div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../com/samsung/multiscreen/Channel.html#setOnConnectListener(com.samsung.multiscreen.Channel.OnConnectListener)">setOnConnectListener</a></code>&nbsp;in class&nbsp;<code><a href="../../../com/samsung/multiscreen/Channel.html" title="class in com.samsung.multiscreen">Channel</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>onConnectListener</code> - the listener to invoke on connect events</dd></dl>
+</dl>
 </li>
 </ul>
 <a name="isWebapp()">

@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 <title>Channel (Samsung SmartView Android SDK)</title>
 <link rel="stylesheet" type="text/css" href="../../../styles.css" title="Style">
 </head>
@@ -241,21 +241,29 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#isConnected()">isConnected</a></strong>()</code>
-<div class="block">Returns if the channel is connected.</div>
+<div class="block">This only tracks websocket connection.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#isDebug()">isDebug</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#isDebug()">isDebug</a></strong>()</code>
+<div class="block">Get whether debug is set.</div>
+</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#isSecurityMode()">isSecurityMode</a></strong>()</code>
+<div class="block">Retrieve whether security mode was set or not</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object)">publish</a></strong>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;event,
        <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;data)</code>
 <div class="block">Send a message to the host on this channel.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20byte[])">publish</a></strong>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;event,
        <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;data,
@@ -263,7 +271,7 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <div class="block">Send a message and (binary) payload to the host on this channel.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20com.samsung.multiscreen.Client)">publish</a></strong>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;event,
        <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;data,
@@ -271,7 +279,7 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <div class="block">Send a message to the specified client on this channel.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20com.samsung.multiscreen.Client,%20byte[])">publish</a></strong>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;event,
        <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;data,
@@ -280,7 +288,7 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <div class="block">Send a message and (binary) payload to the specified client on this channel.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20java.util.List)">publish</a></strong>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;event,
        <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;data,
@@ -288,7 +296,7 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <div class="block">Send a message to the specified clients on this channel.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20java.util.List,%20byte[])">publish</a></strong>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;event,
        <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;data,
@@ -297,7 +305,7 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <div class="block">Send a message and (binary) payload to the specified client on this channel.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20java.lang.String)">publish</a></strong>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;event,
        <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;data,
@@ -305,7 +313,7 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <div class="block">Send a message on this channel.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#publish(java.lang.String,%20java.lang.Object,%20java.lang.String,%20byte[])">publish</a></strong>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;event,
        <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;data,
@@ -314,75 +322,84 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <div class="block">Send a message and (binary) payload on this channel.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#removeAllListeners()">removeAllListeners</a></strong>()</code>
 <div class="block">Remove all listeners from this channel.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#removeOnMessageListener(java.lang.String,%20com.samsung.multiscreen.Channel.OnMessageListener)">removeOnMessageListener</a></strong>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;event,
                        <a href="../../../com/samsung/multiscreen/Channel.OnMessageListener.html" title="interface in com.samsung.multiscreen">Channel.OnMessageListener</a>&nbsp;onMessageListener)</code>
 <div class="block">Remove the specified message listener subscribed to the event on this channel.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#removeOnMessageListeners()">removeOnMessageListeners</a></strong>()</code>
 <div class="block">Remove all message listeners on this channel.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#removeOnMessageListeners(java.lang.String)">removeOnMessageListeners</a></strong>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;event)</code>
 <div class="block">Remove all message listeners subscribed to the given event on this channel.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#setConnectionTimeout(int)">setConnectionTimeout</a></strong>(int&nbsp;timeout)</code>
 <div class="block">Sets the interval for checking the channel connection.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#setDebug(boolean)">setDebug</a></strong>(boolean&nbsp;debug)</code>&nbsp;</td>
-</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#setDebug(boolean)">setDebug</a></strong>(boolean&nbsp;debug)</code>
+<div class="block">Get whether debug is set.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#setOnClientConnectListener(com.samsung.multiscreen.Channel.OnClientConnectListener)">setOnClientConnectListener</a></strong>(<a href="../../../com/samsung/multiscreen/Channel.OnClientConnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnClientConnectListener</a>&nbsp;onClientConnectListener)</code>
 <div class="block">Set the listener for client connect (subscribe) events.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#setOnClientDisconnectListener(com.samsung.multiscreen.Channel.OnClientDisconnectListener)">setOnClientDisconnectListener</a></strong>(<a href="../../../com/samsung/multiscreen/Channel.OnClientDisconnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnClientDisconnectListener</a>&nbsp;onClientDisconnectListener)</code>
 <div class="block">Set the listener for client disconnect (unsubscribe) events.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#setOnConnectListener(com.samsung.multiscreen.Channel.OnConnectListener)">setOnConnectListener</a></strong>(<a href="../../../com/samsung/multiscreen/Channel.OnConnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnConnectListener</a>&nbsp;onConnectListener)</code>
 <div class="block">Set the listener for connect events.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#setOnDisconnectListener(com.samsung.multiscreen.Channel.OnDisconnectListener)">setOnDisconnectListener</a></strong>(<a href="../../../com/samsung/multiscreen/Channel.OnDisconnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnDisconnectListener</a>&nbsp;onDisconnectListener)</code>
 <div class="block">Set the listener for disconnect events.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#setOnErrorListener(com.samsung.multiscreen.Channel.OnErrorListener)">setOnErrorListener</a></strong>(<a href="../../../com/samsung/multiscreen/Channel.OnErrorListener.html" title="interface in com.samsung.multiscreen">Channel.OnErrorListener</a>&nbsp;onErrorListener)</code>
 <div class="block">Set the listener for error events.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#setOnReadyListener(com.samsung.multiscreen.Channel.OnReadyListener)">setOnReadyListener</a></strong>(<a href="../../../com/samsung/multiscreen/Channel.OnReadyListener.html" title="interface in com.samsung.multiscreen">Channel.OnReadyListener</a>&nbsp;onReadyListener)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Channel.html#setSecurityMode(boolean,%20com.samsung.multiscreen.Result)">setSecurityMode</a></strong>(boolean&nbsp;securityMode,
+               <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">Set security mode status to for web socket connection or rest API</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -418,7 +435,10 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <li class="blockList">
 <h4>isConnected</h4>
 <pre>public&nbsp;boolean&nbsp;isConnected()</pre>
-<div class="block">Returns if the channel is connected.</div>
+<div class="block">This only tracks websocket connection. It does NOT track the channel
+ connection. If the channel (really the application host) is not
+ connected, then there is effectively no receiver to process any messages
+ sent over the websocket, unless the target is the service.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true, if connected. false, otherwise.</dd></dl>
 </li>
 </ul>
@@ -441,6 +461,18 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <pre>public&nbsp;void&nbsp;connect(<a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</pre>
 <div class="block">Connect to the specified channel.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>result</code> - the callback to invoke with the result of the connect request</dd></dl>
+</li>
+</ul>
+<a name="setSecurityMode(boolean, com.samsung.multiscreen.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSecurityMode</h4>
+<pre>public&nbsp;void&nbsp;setSecurityMode(boolean&nbsp;securityMode,
+                   <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</pre>
+<div class="block">Set security mode status to for web socket connection or rest API</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>securityMode</code> - security mode status to set</dd><dd><code>result</code> - result to return whether security mode was set or not</dd></dl>
 </li>
 </ul>
 <a name="connect(java.util.Map, com.samsung.multiscreen.Result)">
@@ -673,7 +705,6 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <h4>getUri</h4>
 <pre>public&nbsp;<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;getUri()</pre>
 <div class="block">This channel's uri.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>the uri for this channel</dd></dl>
 </li>
 </ul>
 <a name="getId()">
@@ -684,7 +715,6 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <h4>getId</h4>
 <pre>public&nbsp;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getId()</pre>
 <div class="block">This channel's id.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>the id for this channel</dd></dl>
 </li>
 </ul>
 <a name="getClients()">
@@ -695,7 +725,16 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <h4>getClients</h4>
 <pre>public&nbsp;<a href="../../../com/samsung/multiscreen/Clients.html" title="class in com.samsung.multiscreen">Clients</a>&nbsp;getClients()</pre>
 <div class="block">Retrieve the clients subscribed to this channel.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>the clients currently subscribed to this channel</dd></dl>
+</li>
+</ul>
+<a name="isSecurityMode()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isSecurityMode</h4>
+<pre>public&nbsp;boolean&nbsp;isSecurityMode()</pre>
+<div class="block">Retrieve whether security mode was set or not</div>
 </li>
 </ul>
 <a name="setOnConnectListener(com.samsung.multiscreen.Channel.OnConnectListener)">
@@ -705,9 +744,8 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <li class="blockList">
 <h4>setOnConnectListener</h4>
 <pre>public&nbsp;void&nbsp;setOnConnectListener(<a href="../../../com/samsung/multiscreen/Channel.OnConnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnConnectListener</a>&nbsp;onConnectListener)</pre>
-<div class="block">Set the listener for connect events. Setting the parameter to 
+<div class="block">Set the listener for connect events. Setting the parameter to
  <code>null</code> will remove the listener.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>onConnectListener</code> - the listener to invoke on connect events</dd></dl>
 </li>
 </ul>
 <a name="setOnDisconnectListener(com.samsung.multiscreen.Channel.OnDisconnectListener)">
@@ -717,9 +755,8 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <li class="blockList">
 <h4>setOnDisconnectListener</h4>
 <pre>public&nbsp;void&nbsp;setOnDisconnectListener(<a href="../../../com/samsung/multiscreen/Channel.OnDisconnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnDisconnectListener</a>&nbsp;onDisconnectListener)</pre>
-<div class="block">Set the listener for disconnect events. Setting the parameter to 
+<div class="block">Set the listener for disconnect events. Setting the parameter to
  <code>null</code> will remove the listener.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>onDisconnectListener</code> - the listener to invoke on disconnect events</dd></dl>
 </li>
 </ul>
 <a name="setOnClientConnectListener(com.samsung.multiscreen.Channel.OnClientConnectListener)">
@@ -729,9 +766,8 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <li class="blockList">
 <h4>setOnClientConnectListener</h4>
 <pre>public&nbsp;void&nbsp;setOnClientConnectListener(<a href="../../../com/samsung/multiscreen/Channel.OnClientConnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnClientConnectListener</a>&nbsp;onClientConnectListener)</pre>
-<div class="block">Set the listener for client connect (subscribe) events. Setting the 
+<div class="block">Set the listener for client connect (subscribe) events. Setting the
  parameter to <code>null</code> will remove the listener.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>onClientConnectListener</code> - the listener to invoke on client connect events</dd></dl>
 </li>
 </ul>
 <a name="setOnClientDisconnectListener(com.samsung.multiscreen.Channel.OnClientDisconnectListener)">
@@ -741,9 +777,8 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <li class="blockList">
 <h4>setOnClientDisconnectListener</h4>
 <pre>public&nbsp;void&nbsp;setOnClientDisconnectListener(<a href="../../../com/samsung/multiscreen/Channel.OnClientDisconnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnClientDisconnectListener</a>&nbsp;onClientDisconnectListener)</pre>
-<div class="block">Set the listener for client disconnect (unsubscribe) events. Setting the 
+<div class="block">Set the listener for client disconnect (unsubscribe) events. Setting the
  parameter to <code>null</code> will remove the listener.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>onClientDisconnectListener</code> - the listener to invoke on client disconnect events</dd></dl>
 </li>
 </ul>
 <a name="setOnReadyListener(com.samsung.multiscreen.Channel.OnReadyListener)">
@@ -758,7 +793,6 @@ public&nbsp;void&nbsp;setOnReadyListener(<a href="../../../com/samsung/multiscre
 <div class="block">Set the listener for ready events (when the has subscribed to the channel 
  and is "ready" to handle messages).  Setting the parameter to 
  <code>null</code> will remove the listener.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>onReadyListener</code> - the listener to invoke on ready events</dd></dl>
 </li>
 </ul>
 <a name="setOnErrorListener(com.samsung.multiscreen.Channel.OnErrorListener)">
@@ -768,27 +802,28 @@ public&nbsp;void&nbsp;setOnReadyListener(<a href="../../../com/samsung/multiscre
 <li class="blockList">
 <h4>setOnErrorListener</h4>
 <pre>public&nbsp;void&nbsp;setOnErrorListener(<a href="../../../com/samsung/multiscreen/Channel.OnErrorListener.html" title="interface in com.samsung.multiscreen">Channel.OnErrorListener</a>&nbsp;onErrorListener)</pre>
-<div class="block">Set the listener for error events. Setting the parameter to 
+<div class="block">Set the listener for error events. Setting the parameter to
  <code>null</code> will remove the listener.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>onErrorListener</code> - the listener to invoke on errors</dd></dl>
-</li>
-</ul>
-<a name="isDebug()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>isDebug</h4>
-<pre>public&nbsp;boolean&nbsp;isDebug()</pre>
 </li>
 </ul>
 <a name="setDebug(boolean)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setDebug</h4>
 <pre>public&nbsp;void&nbsp;setDebug(boolean&nbsp;debug)</pre>
+<div class="block">Get whether debug is set.</div>
+</li>
+</ul>
+<a name="isDebug()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isDebug</h4>
+<pre>public&nbsp;boolean&nbsp;isDebug()</pre>
+<div class="block">Get whether debug is set.</div>
 </li>
 </ul>
 </li>

@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 <title>Search (Samsung SmartView Android SDK)</title>
 <link rel="stylesheet" type="text/css" href="../../../styles.css" title="Style">
 </head>
@@ -183,11 +183,15 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Search.html#isSearchingBle()">isSearchingBle</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Search.html#isSearchingBle()">isSearchingBle</a></strong>()</code>
+<div class="block">Returns if any BLE search is in progress.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Search.html#isSupportBle()">isSupportBle</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../com/samsung/multiscreen/Search.html#isSupportBle()">isSupportBle</a></strong>()</code>
+<div class="block">Checks whether BLE is supported.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -293,6 +297,8 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <li class="blockList">
 <h4>isSearchingBle</h4>
 <pre>public&nbsp;boolean&nbsp;isSearchingBle()</pre>
+<div class="block">Returns if any BLE search is in progress.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true, if a search is in progress. false, otherwise.</dd></dl>
 </li>
 </ul>
 <a name="start()">
@@ -324,6 +330,8 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <li class="blockList">
 <h4>isSupportBle</h4>
 <pre>public&nbsp;boolean&nbsp;isSupportBle()</pre>
+<div class="block">Checks whether BLE is supported.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true, if stopped. false, otherwise.</dd></dl>
 </li>
 </ul>
 <a name="startUsingBle()">
@@ -402,7 +410,6 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <h4>setOnStartListener</h4>
 <pre>public&nbsp;void&nbsp;setOnStartListener(<a href="../../../com/samsung/multiscreen/Search.OnStartListener.html" title="interface in com.samsung.multiscreen">Search.OnStartListener</a>&nbsp;onStartListener)</pre>
 <div class="block">Set the listener for start (search) events.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>onStartListener</code> - the listener to invoke on start events</dd></dl>
 </li>
 </ul>
 <a name="setOnStopListener(com.samsung.multiscreen.Search.OnStopListener)">
@@ -413,7 +420,6 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <h4>setOnStopListener</h4>
 <pre>public&nbsp;void&nbsp;setOnStopListener(<a href="../../../com/samsung/multiscreen/Search.OnStopListener.html" title="interface in com.samsung.multiscreen">Search.OnStopListener</a>&nbsp;onStopListener)</pre>
 <div class="block">Set the listener for stop (search) events.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>onStopListener</code> - the listener to invoke on stop events</dd></dl>
 </li>
 </ul>
 <a name="setOnServiceFoundListener(com.samsung.multiscreen.Search.OnServiceFoundListener)">
@@ -424,7 +430,6 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <h4>setOnServiceFoundListener</h4>
 <pre>public&nbsp;void&nbsp;setOnServiceFoundListener(<a href="../../../com/samsung/multiscreen/Search.OnServiceFoundListener.html" title="interface in com.samsung.multiscreen">Search.OnServiceFoundListener</a>&nbsp;onServiceFoundListener)</pre>
 <div class="block">Set the listener for service found events.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>onServiceFoundListener</code> - the listener to invoked on service found events</dd></dl>
 </li>
 </ul>
 <a name="setOnServiceLostListener(com.samsung.multiscreen.Search.OnServiceLostListener)">
@@ -435,7 +440,6 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <h4>setOnServiceLostListener</h4>
 <pre>public&nbsp;void&nbsp;setOnServiceLostListener(<a href="../../../com/samsung/multiscreen/Search.OnServiceLostListener.html" title="interface in com.samsung.multiscreen">Search.OnServiceLostListener</a>&nbsp;onServiceLostListener)</pre>
 <div class="block">Set the listener for service lost events.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>onServiceLostListener</code> - the listener to invoke on service lost events</dd></dl>
 </li>
 </ul>
 <a name="setOnBleFoundListener(com.samsung.multiscreen.Search.OnBleFoundListener)">
