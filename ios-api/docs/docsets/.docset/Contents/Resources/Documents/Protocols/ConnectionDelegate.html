@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MediaPlayerDelegate Protocol Reference</title>
+    <title>ConnectionDelegate Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,18 +10,18 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/MediaPlayerDelegate" class="dashAnchor"></a>
-    <a title="MediaPlayerDelegate Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/ConnectionDelegate" class="dashAnchor"></a>
+    <a title="ConnectionDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (58% documented)</p>
+        <p><a href="../index.html"> Docs</a> (93% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        MediaPlayerDelegate Protocol Reference
+        ConnectionDelegate Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -34,6 +34,12 @@
                 <a href="../Classes/Application.html">Application</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AudioPlayer.html">AudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BasePlayer.html">BasePlayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Channel.html">Channel</a>
               </li>
               <li class="nav-group-task">
@@ -43,13 +49,22 @@
                 <a href="../Classes/MediaPlayer.html">MediaPlayer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/MediaPlayer/PlayerNotice.html">– PlayerNotice</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PhotoPlayer.html">PhotoPlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Service.html">Service</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ServiceSearch.html">ServiceSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoPlayer.html">VideoPlayer</a>
               </li>
             </ul>
           </li>
@@ -102,13 +117,22 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Protocols/AudioPlayerDelegate.html">AudioPlayerDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/ChannelDelegate.html">ChannelDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/MediaPlayerDelegate.html">MediaPlayerDelegate</a>
+                <a href="../Protocols/ConnectionDelegate.html">ConnectionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PhotoPlayerDelegate.html">PhotoPlayerDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ServiceSearchDelegate.html">ServiceSearchDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VideoPlayerDelegate.html">VideoPlayerDelegate</a>
               </li>
             </ul>
           </li>
@@ -117,19 +141,32 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>MediaPlayerDelegate</h1>
-            <p>Undocumented</p>
+            <h1>ConnectionDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ConnectionDelegate</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+
+                </div>
+              </div>
+            <p>The Connection delegate protocol defines the event methods available for channel Connection/DisConnection.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Optional%20Callbacks%20for%20Connection"></a>
+                <a name="//apple_ref/swift/Section/Optional Callbacks for Connection" class="dashAnchor"></a>
+                <a href="#/Optional%20Callbacks%20for%20Connection">
+                  <h3 class="section-name">Optional Callbacks for Connection</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP9SmartView19MediaPlayerDelegate9onConnectuRq_S0__Fq_FGSqCSo7NSError_T_"></a>
+                    <a name="/s:FP9SmartView18ConnectionDelegate9onConnectuRq_S0__Fq_FGSqCSo7NSError_T_"></a>
                     <a name="//apple_ref/swift/Method/onConnect(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP9SmartView19MediaPlayerDelegate9onConnectuRq_S0__Fq_FGSqCSo7NSError_T_">onConnect(_:)</a>
+                    <a class="token" href="#/s:FP9SmartView18ConnectionDelegate9onConnectuRq_S0__Fq_FGSqCSo7NSError_T_">onConnect(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -137,8 +174,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>event occur when connection occur with channel.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onConnect</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>connection error</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -146,9 +211,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP9SmartView19MediaPlayerDelegate12onDisconnectuRq_S0__Fq_FGSqCSo7NSError_T_"></a>
+                    <a name="/s:FP9SmartView18ConnectionDelegate12onDisconnectuRq_S0__Fq_FGSqCSo7NSError_T_"></a>
                     <a name="//apple_ref/swift/Method/onDisconnect(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP9SmartView19MediaPlayerDelegate12onDisconnectuRq_S0__Fq_FGSqCSo7NSError_T_">onDisconnect(_:)</a>
+                    <a class="token" href="#/s:FP9SmartView18ConnectionDelegate12onDisconnectuRq_S0__Fq_FGSqCSo7NSError_T_">onDisconnect(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -156,8 +221,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>event occur when Disconnection occur with channel.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onDisconnect</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>disconnect error.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -165,9 +258,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP9SmartView19MediaPlayerDelegate14onPlayerNoticeuRq_S0__Fq_FGVSs10DictionarySSPSs9AnyObject__T_"></a>
+                    <a name="/s:FP9SmartView18ConnectionDelegate14onPlayerNoticeuRq_S0__Fq_FGVSs10DictionarySSPSs9AnyObject__T_"></a>
                     <a name="//apple_ref/swift/Method/onPlayerNotice(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP9SmartView19MediaPlayerDelegate14onPlayerNoticeuRq_S0__Fq_FGVSs10DictionarySSPSs9AnyObject__T_">onPlayerNotice(_:)</a>
+                    <a class="token" href="#/s:FP9SmartView18ConnectionDelegate14onPlayerNoticeuRq_S0__Fq_FGVSs10DictionarySSPSs9AnyObject__T_">onPlayerNotice(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -176,8 +269,8 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Called when media player on target device sends <q>playerNotice</q> event to client.
-It may be change of playback status, error message or informative event about video stream state.
-See MediaPlayer.PlayerNotice definition for possible values.</p>
+  It may be change of playback status, error message or informative event about video stream state.
+  See MediaPlayer.PlayerNotice definition for possible values.</p>
 
                       </div>
                       <div class="declaration">
@@ -188,6 +281,26 @@ See MediaPlayer.PlayerNotice definition for possible values.</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>messageData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>information about player events</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -196,8 +309,8 @@ See MediaPlayer.PlayerNotice definition for possible values.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-05-31)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-09-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

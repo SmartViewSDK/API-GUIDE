@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AudioPlayer Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/AudioPlayer" class="dashAnchor"></a>
+    <a title="AudioPlayer Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (93% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        AudioPlayer Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Application.html">Application</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AudioPlayer.html">AudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BasePlayer.html">BasePlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Channel.html">Channel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChannelClient.html">ChannelClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MediaPlayer.html">MediaPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MediaPlayer/PlayerNotice.html">– PlayerNotice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PhotoPlayer.html">PhotoPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Service.html">Service</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ServiceSearch.html">ServiceSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoPlayer.html">VideoPlayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v9SmartView16MSDidFindServiceSS">MSDidFindService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v9SmartView18MSDidFoundUsingBLESS">MSDidFoundUsingBLE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v9SmartView18MSDidRemoveServiceSS">MSDidRemoveService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v9SmartView16MSDidStartSearchSS">MSDidStartSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v9SmartView15MSDidStopSearchSS">MSDidStopSearch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ChannelEvent.html">ChannelEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MessageTarget.html">MessageTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ServiceSearchDiscoveryType.html">ServiceSearchDiscoveryType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF9SmartViewoi2eeFTCS_13ChannelClientS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF9SmartViewoi2eeFTCS_7ServiceS0__Sb">==(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AudioPlayerDelegate.html">AudioPlayerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ChannelDelegate.html">ChannelDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ConnectionDelegate.html">ConnectionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PhotoPlayerDelegate.html">PhotoPlayerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ServiceSearchDelegate.html">ServiceSearchDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VideoPlayerDelegate.html">VideoPlayerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AudioPlayer</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioPlayer</span><span class="p">:</span> <span class="kt"><a href="../Classes/BasePlayer.html">BasePlayer</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Audio Player Class handle the Audio share,control and TV Player queue.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SmartView11AudioPlayer14playerDelegateXwGSqPS_19AudioPlayerDelegate__"></a>
+                    <a name="//apple_ref/swift/Property/playerDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SmartView11AudioPlayer14playerDelegateXwGSqPS_19AudioPlayerDelegate__">playerDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Audio Player delegate protocol defines the event methods available for a Audio.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">playerDelegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioPlayerDelegate.html">AudioPlayerDelegate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20APIs-%20objective%20C%20compatible"></a>
+                <a name="//apple_ref/swift/Section/Public APIs- objective C compatible" class="dashAnchor"></a>
+                <a href="#/Public%20APIs-%20objective%20C%20compatible">
+                  <h3 class="section-name">Public APIs- objective C compatible</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView11AudioPlayer11playContentFS0_FTCSo5NSURL17completionHandlerGSqFGSqCSo7NSError_T___T_"></a>
+                    <a name="//apple_ref/swift/Method/playContent(_:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView11AudioPlayer11playContentFS0_FTCSo5NSURL17completionHandlerGSqFGSqCSo7NSError_T___T_">playContent(_:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>this method play Audio content on TV.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">playContent</span><span class="p">(</span><span class="nv">contentURL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">((</span><span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Audio Url</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The response completion closure, it will be executed in the request queue i.e. in a backgound thread.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView11AudioPlayer11playContentFS0_FTCSo5NSURL5titleSS9albumNameSS11albumArtUrlS1_17completionHandlerGSqFGSqCSo7NSError_T___T_"></a>
+                    <a name="//apple_ref/swift/Method/playContent(_:title:albumName:albumArtUrl:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView11AudioPlayer11playContentFS0_FTCSo5NSURL5titleSS9albumNameSS11albumArtUrlS1_17completionHandlerGSqFGSqCSo7NSError_T___T_">playContent(_:title:albumName:albumArtUrl:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>play Audio content on TV.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">playContent</span><span class="p">(</span><span class="nv">contentURL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">albumName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">albumArtUrl</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">((</span><span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Content URL</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>title</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Content Title</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>albumName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Content album name</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>albumArtUrl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Content thumbnail URL</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The response completion closure, it will be executed in the request queue i.e. in a backgound thread.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView11AudioPlayer4seekFS0_FSdT_"></a>
+                    <a name="//apple_ref/swift/Method/seek(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView11AudioPlayer4seekFS0_FSdT_">seek(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Seek the given time in currently playing media.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">seek</span><span class="p">(</span><span class="nv">time</span><span class="p">:</span> <span class="kt">NSTimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>time</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Time in seconds within length of currently playing media.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView11AudioPlayer29resumeApplicationInForegroundFS0_FTGSqFGSqCSo7NSError_T___T_"></a>
+                    <a name="//apple_ref/swift/Method/resumeApplicationInForeground(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView11AudioPlayer29resumeApplicationInForegroundFS0_FTGSqFGSqCSo7NSError_T___T_">resumeApplicationInForeground(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>resumes TV widget/application from background process.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">resumeApplicationInForeground</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">((</span><span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The response completion closure, it will be executed in the request queue i.e. in a backgound thread.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Queue%20Implementation"></a>
+                <a name="//apple_ref/swift/Section/Queue Implementation" class="dashAnchor"></a>
+                <a href="#/Queue%20Implementation">
+                  <h3 class="section-name">Queue Implementation</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView11AudioPlayer11repeatQueueFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/repeatQueue()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView11AudioPlayer11repeatQueueFS0_FT_T_">repeatQueue()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>repeat player list.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">repeatQueue</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView11AudioPlayer7shuffleFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/shuffle()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView11AudioPlayer7shuffleFS0_FT_T_">shuffle()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>shuffle player list.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">shuffle</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView11AudioPlayer7getListFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/getList()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView11AudioPlayer7getListFS0_FT_T_">getList()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>request player list i.e currently playing on TV.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">getList</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView11AudioPlayer9clearListFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/clearList()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView11AudioPlayer9clearListFS0_FT_T_">clearList()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>request to delete(removeAll) player list.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearList</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView11AudioPlayer14removeFromListFS0_FCSo5NSURLT_"></a>
+                    <a name="//apple_ref/swift/Method/removeFromList(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView11AudioPlayer14removeFromListFS0_FCSo5NSURLT_">removeFromList(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>remove specific audio from player list.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeFromList</span><span class="p">(</span><span class="nv">contentURL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Audio URL</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView11AudioPlayer9addToListFS0_FTCSo5NSURL5titleSS9albumNameSS11albumArtUrlS1__T_"></a>
+                    <a name="//apple_ref/swift/Method/addToList(_:title:albumName:albumArtUrl:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView11AudioPlayer9addToListFS0_FTCSo5NSURL5titleSS9albumNameSS11albumArtUrlS1__T_">addToList(_:title:albumName:albumArtUrl:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add Audio item to player list.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">addToList</span><span class="p">(</span><span class="nv">contentURL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">albumName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">albumArtUrl</span><span class="p">:</span> <span class="kt">NSURL</span> <span class="o">=</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">fileURLWithPath</span><span class="p">:</span> <span class="s">""</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>title</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Title</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>albumName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Album NAme</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>albumArtUrl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>thumbnail URL</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView11AudioPlayer9addToListFS0_FGSaGVSs10DictionarySSPSs9AnyObject___T_"></a>
+                    <a name="//apple_ref/swift/Method/addToList(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView11AudioPlayer9addToListFS0_FGSaGVSs10DictionarySSPSs9AnyObject___T_">addToList(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add Audio item to player list.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">addToList</span><span class="p">(</span><span class="k">var</span> <span class="nv">arrayDictofData</span><span class="p">:</span> <span class="p">[[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">]])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>arrayDictofData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>list data in form array of dictionary</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Notification%20Method"></a>
+                <a name="//apple_ref/swift/Section/Notification Method" class="dashAnchor"></a>
+                <a href="#/Notification%20Method">
+                  <h3 class="section-name">Notification Method</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView11AudioPlayer9onMessageFS0_FGSQCSo14NSNotification_T_"></a>
+                    <a name="//apple_ref/swift/Method/onMessage(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView11AudioPlayer9onMessageFS0_FGSQCSo14NSNotification_T_">onMessage(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notification of any data received from TV player</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onMessage</span><span class="p">(</span><span class="nv">notification</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>notification</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>contains player queue event and action</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-09-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

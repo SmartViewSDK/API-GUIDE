@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VideoPlayerDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/VideoPlayerDelegate" class="dashAnchor"></a>
+    <a title="VideoPlayerDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (93% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        VideoPlayerDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Application.html">Application</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AudioPlayer.html">AudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BasePlayer.html">BasePlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Channel.html">Channel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChannelClient.html">ChannelClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MediaPlayer.html">MediaPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MediaPlayer/PlayerNotice.html">– PlayerNotice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PhotoPlayer.html">PhotoPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Service.html">Service</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ServiceSearch.html">ServiceSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoPlayer.html">VideoPlayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v9SmartView16MSDidFindServiceSS">MSDidFindService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v9SmartView18MSDidFoundUsingBLESS">MSDidFoundUsingBLE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v9SmartView18MSDidRemoveServiceSS">MSDidRemoveService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v9SmartView16MSDidStartSearchSS">MSDidStartSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v9SmartView15MSDidStopSearchSS">MSDidStopSearch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ChannelEvent.html">ChannelEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MessageTarget.html">MessageTarget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ServiceSearchDiscoveryType.html">ServiceSearchDiscoveryType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF9SmartViewoi2eeFTCS_13ChannelClientS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF9SmartViewoi2eeFTCS_7ServiceS0__Sb">==(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AudioPlayerDelegate.html">AudioPlayerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ChannelDelegate.html">ChannelDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ConnectionDelegate.html">ConnectionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PhotoPlayerDelegate.html">PhotoPlayerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ServiceSearchDelegate.html">ServiceSearchDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VideoPlayerDelegate.html">VideoPlayerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>VideoPlayerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">VideoPlayerDelegate</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+
+                </div>
+              </div>
+            <p>The Video Player delegate protocol defines the event methods available for a Video.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/All%20Optional%20Callbacks"></a>
+                <a name="//apple_ref/swift/Section/All Optional Callbacks" class="dashAnchor"></a>
+                <a href="#/All%20Optional%20Callbacks">
+                  <h3 class="section-name">All Optional Callbacks</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate16onBufferingStartuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onBufferingStart()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate16onBufferingStartuRq_S0__Fq_FT_T_">onBufferingStart()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on Buffering of Video Start.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onBufferingStart</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate19onBufferingCompleteuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onBufferingComplete()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate19onBufferingCompleteuRq_S0__Fq_FT_T_">onBufferingComplete()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on Buffering of Video Complete.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onBufferingComplete</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate19onBufferingProgressuRq_S0__Fq_FSiT_"></a>
+                    <a name="//apple_ref/swift/Method/onBufferingProgress(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate19onBufferingProgressuRq_S0__Fq_FSiT_">onBufferingProgress(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs asynchronously when video buffering is in progress.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onBufferingProgress</span><span class="p">(</span><span class="nv">progress</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>current Buffer Progerss</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate17onCurrentPlayTimeuRq_S0__Fq_FSiT_"></a>
+                    <a name="//apple_ref/swift/Method/onCurrentPlayTime(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate17onCurrentPlayTimeuRq_S0__Fq_FSiT_">onCurrentPlayTime(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs continously when video streaming is going on.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onCurrentPlayTime</span><span class="p">(</span><span class="nv">progress</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>current playing time of video.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate18onStreamingStarteduRq_S0__Fq_FSiT_"></a>
+                    <a name="//apple_ref/swift/Method/onStreamingStarted(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate18onStreamingStarteduRq_S0__Fq_FSiT_">onStreamingStarted(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs when video streaming start.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onStreamingStarted</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>total duration of video.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate17onStreamCompleteduRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onStreamCompleted()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate17onStreamCompleteduRq_S0__Fq_FT_T_">onStreamCompleted()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs when video streaming completed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onStreamCompleted</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate19onPlayerInitializeduRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onPlayerInitialized()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate19onPlayerInitializeduRq_S0__Fq_FT_T_">onPlayerInitialized()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs when video is shared with TV for the first time.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onPlayerInitialized</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate14onPlayerChangeuRq_S0__Fq_FSST_"></a>
+                    <a name="//apple_ref/swift/Method/onPlayerChange(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate14onPlayerChangeuRq_S0__Fq_FSST_">onPlayerChange(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs when different type of media is shared with TV.
+  (video is shared after photo/audio share)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onPlayerChange</span><span class="p">(</span><span class="nv">playerType</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>playerType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>current player type (photo/audio/video)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate6onPlayuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onPlay()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate6onPlayuRq_S0__Fq_FT_T_">onPlay()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs when paused video is played.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onPlay</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate7onPauseuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onPause()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate7onPauseuRq_S0__Fq_FT_T_">onPause()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on video pause.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onPause</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate6onStopuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onStop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate6onStopuRq_S0__Fq_FT_T_">onStop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on video stop.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onStop</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate9onForwarduRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onForward()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate9onForwarduRq_S0__Fq_FT_T_">onForward()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on fast forwarding the video.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onForward</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate8onRewinduRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onRewind()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate8onRewinduRq_S0__Fq_FT_T_">onRewind()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on rewind the video.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onRewind</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate6onMuteuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onMute()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate6onMuteuRq_S0__Fq_FT_T_">onMute()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on Player mute.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onMute</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate8onUnMuteuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onUnMute()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate8onUnMuteuRq_S0__Fq_FT_T_">onUnMute()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on Player unMute.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onUnMute</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate15onControlStatusuRq_S0__Fq_FTSi10muteStatusSb4modeSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/onControlStatus(_:muteStatus:mode:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate15onControlStatusuRq_S0__Fq_FTSi10muteStatusSb4modeSS_T_">onControlStatus(_:muteStatus:mode:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>provides the status of play controls like volume, mute/unmute and mode of player like single or repeat all
+- parameter volLevel:      player volume level
+- parameter muteStatus:    player mute status
+- parameter shuffleStatus: player shuffle status
+- parameter mode:          player mode single or repeat all</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onControlStatus</span><span class="p">(</span><span class="nv">volLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">muteStatus</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>volLevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>player volume level</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>muteStatus</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>player mute status</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shuffleStatus</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>player shuffle status</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>player mode single or repeat all</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate14onVolumeChangeuRq_S0__Fq_FSiT_"></a>
+                    <a name="//apple_ref/swift/Method/onVolumeChange(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate14onVolumeChangeuRq_S0__Fq_FSiT_">onVolumeChange(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on  player volume change.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onVolumeChange</span><span class="p">(</span><span class="nv">volLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>volLevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>player volume to be set.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate11onAddToListuRq_S0__Fq_FGVSs10DictionarySSPSs9AnyObject__T_"></a>
+                    <a name="//apple_ref/swift/Method/onAddToList(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate11onAddToListuRq_S0__Fq_FGVSs10DictionarySSPSs9AnyObject__T_">onAddToList(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on video addition in TV queue(player list).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onAddToList</span><span class="p">(</span><span class="nv">enqueuedItem</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>enqueuedItem</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>enqueued video item.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate16onRemoveFromListuRq_S0__Fq_FGVSs10DictionarySSPSs9AnyObject__T_"></a>
+                    <a name="//apple_ref/swift/Method/onRemoveFromList(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate16onRemoveFromListuRq_S0__Fq_FGVSs10DictionarySSPSs9AnyObject__T_">onRemoveFromList(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on video remove from TV queue(player list).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onRemoveFromList</span><span class="p">(</span><span class="nv">dequeuedItem</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dequeuedItem</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>dequeued video Item.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate11onClearListuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onClearList()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate11onClearListuRq_S0__Fq_FT_T_">onClearList()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on TV queue(player list) deletion.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onClearList</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate9onGetListuRq_S0__Fq_FGVSs10DictionarySSPSs9AnyObject__T_"></a>
+                    <a name="//apple_ref/swift/Method/onGetList(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate9onGetListuRq_S0__Fq_FGVSs10DictionarySSPSs9AnyObject__T_">onGetList(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs when player list(TV queue) is recieved.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onGetList</span><span class="p">(</span><span class="nv">queueList</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queueList</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>play list of TV</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate8onRepeatuRq_S0__Fq_FSST_"></a>
+                    <a name="//apple_ref/swift/Method/onRepeat(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate8onRepeatuRq_S0__Fq_FSST_">onRepeat(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>event occurs on player list repeat.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onRepeat</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>specify repeat all/repeat single audio</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate16onCurrentPlayinguRq_S0__Fq_FGVSs10DictionarySSPSs9AnyObject__T_"></a>
+                    <a name="//apple_ref/swift/Method/onCurrentPlaying(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate16onCurrentPlayinguRq_S0__Fq_FGVSs10DictionarySSPSs9AnyObject__T_">onCurrentPlaying(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>occurs when new audio is shared with TV.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onCurrentPlaying</span><span class="p">(</span><span class="nv">currentItem</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>currentItem</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>current shared item.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate20onApplicationSuspenduRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onApplicationSuspend()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate20onApplicationSuspenduRq_S0__Fq_FT_T_">onApplicationSuspend()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>occurs when TV Application/widget goes into background.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onApplicationSuspend</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate19onApplicationResumeuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/onApplicationResume()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate19onApplicationResumeuRq_S0__Fq_FT_T_">onApplicationResume()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>occurs when  TV Application/widget comes in foreground.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onApplicationResume</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9SmartView19VideoPlayerDelegate7onErroruRq_S0__Fq_FCSo7NSErrorT_"></a>
+                    <a name="//apple_ref/swift/Method/onError(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9SmartView19VideoPlayerDelegate7onErroruRq_S0__Fq_FCSo7NSErrorT_">onError(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>occurs when error is occured in playing Audio</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">onError</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>eror details</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-09-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

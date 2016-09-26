@@ -14,7 +14,7 @@
     <a title="ChannelEvent Enum Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (58% documented)</p>
+        <p><a href="../index.html"> Docs</a> (93% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -34,6 +34,12 @@
                 <a href="../Classes/Application.html">Application</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AudioPlayer.html">AudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BasePlayer.html">BasePlayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Channel.html">Channel</a>
               </li>
               <li class="nav-group-task">
@@ -43,13 +49,22 @@
                 <a href="../Classes/MediaPlayer.html">MediaPlayer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/MediaPlayer/PlayerNotice.html">– PlayerNotice</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PhotoPlayer.html">PhotoPlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Service.html">Service</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ServiceSearch.html">ServiceSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoPlayer.html">VideoPlayer</a>
               </li>
             </ul>
           </li>
@@ -102,13 +117,22 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Protocols/AudioPlayerDelegate.html">AudioPlayerDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/ChannelDelegate.html">ChannelDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/MediaPlayerDelegate.html">MediaPlayerDelegate</a>
+                <a href="../Protocols/ConnectionDelegate.html">ConnectionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PhotoPlayerDelegate.html">PhotoPlayerDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ServiceSearchDelegate.html">ServiceSearchDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VideoPlayerDelegate.html">VideoPlayerDelegate</a>
               </li>
             </ul>
           </li>
@@ -130,18 +154,6 @@ alternative to the ChannelDelegate protocol.</p>
 <p>Use this channel event enumeration in conjunction with the channel.on(&hellip;) and channel.off(&hellip;)
 methods in order to receive the notifications in a closure in the main thread</p>
 
-<ul>
-<li>Connect:          The on connect event</li>
-<li>Disconnect:       The on disconnect event</li>
-<li>ClientConnect:    A client connect event</li>
-<li>ClientDisconnect: A client disconnect event</li>
-<li>Message:          A text message was received</li>
-<li>Data:             A binary data message was received</li>
-<li>Unauthorized:     Connection to channel failed due to authorization issue (for some specific channels)</li>
-<li>Error:            An error happened</li>
-<li>Ready:            The host app is ready to send or receive messages</li>
-</ul>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -159,14 +171,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The on connect event</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ChannelEvent</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Connect</span> <span class="o">=</span> <span class="s">"ms.channel.connect"</span></code></pre>
 
                         </div>
                       </div>
@@ -190,14 +202,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The on disconnect event</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ChannelEvent</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Disconnect</span> <span class="o">=</span> <span class="s">"ms.channel.disconnect"</span></code></pre>
 
                         </div>
                       </div>
@@ -221,14 +233,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A client connect event</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ChannelEvent</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">ClientConnect</span> <span class="o">=</span> <span class="s">"ms.channel.clientConnect"</span></code></pre>
 
                         </div>
                       </div>
@@ -252,14 +264,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>client disconnect event</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ChannelEvent</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">ClientDisconnect</span> <span class="o">=</span> <span class="s">"ms.channel.clientDisconnect"</span></code></pre>
 
                         </div>
                       </div>
@@ -283,14 +295,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A text message was received</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ChannelEvent</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Message</span> <span class="o">=</span> <span class="s">"ms.channel.message"</span></code></pre>
 
                         </div>
                       </div>
@@ -314,14 +326,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A binary data message was received</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ChannelEvent</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Data</span> <span class="o">=</span> <span class="s">"ms.channel.data"</span></code></pre>
 
                         </div>
                       </div>
@@ -345,14 +357,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Connection to channel failed due to authorization issue (for some specific channels)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ChannelEvent</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Unauthorized</span> <span class="o">=</span> <span class="s">"ms.channel.unauthorized"</span></code></pre>
 
                         </div>
                       </div>
@@ -376,14 +388,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>C0nnection time out</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ChannelEvent</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Timeout</span> <span class="o">=</span> <span class="s">"ms.channel.timeOut"</span></code></pre>
 
                         </div>
                       </div>
@@ -407,14 +419,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An error happened</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ChannelEvent</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Error</span> <span class="o">=</span> <span class="s">"ms.error"</span></code></pre>
 
                         </div>
                       </div>
@@ -438,14 +450,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The host app is ready to send or receive messages</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ChannelEvent</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Ready</span> <span class="o">=</span> <span class="s">"ms.channel.ready"</span></code></pre>
 
                         </div>
                       </div>
@@ -469,14 +481,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The Channel Ping event</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ChannelEvent</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Ping</span> <span class="o">=</span> <span class="s">"ms:channel.ping"</span></code></pre>
 
                         </div>
                       </div>
@@ -488,8 +500,8 @@ methods in order to receive the notifications in a closure in the main thread</p
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-05-31)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-09-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -13,7 +13,7 @@
     <a title="Protocols  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (58% documented)</p>
+        <p><a href="index.html"> Docs</a> (93% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -33,6 +33,12 @@
                 <a href="Classes/Application.html">Application</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AudioPlayer.html">AudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BasePlayer.html">BasePlayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Channel.html">Channel</a>
               </li>
               <li class="nav-group-task">
@@ -42,13 +48,22 @@
                 <a href="Classes/MediaPlayer.html">MediaPlayer</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/MediaPlayer/PlayerNotice.html">– PlayerNotice</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PhotoPlayer.html">PhotoPlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Service.html">Service</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ServiceSearch.html">ServiceSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/VideoPlayer.html">VideoPlayer</a>
               </li>
             </ul>
           </li>
@@ -101,13 +116,22 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Protocols/AudioPlayerDelegate.html">AudioPlayerDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/ChannelDelegate.html">ChannelDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/MediaPlayerDelegate.html">MediaPlayerDelegate</a>
+                <a href="Protocols/ConnectionDelegate.html">ConnectionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PhotoPlayerDelegate.html">PhotoPlayerDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/ServiceSearchDelegate.html">ServiceSearchDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/VideoPlayerDelegate.html">VideoPlayerDelegate</a>
               </li>
             </ul>
           </li>
@@ -126,9 +150,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P9SmartView19MediaPlayerDelegate"></a>
-                    <a name="//apple_ref/swift/Protocol/MediaPlayerDelegate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P9SmartView19MediaPlayerDelegate">MediaPlayerDelegate</a>
+                    <a name="/s:P9SmartView18ConnectionDelegate"></a>
+                    <a name="//apple_ref/swift/Protocol/ConnectionDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P9SmartView18ConnectionDelegate">ConnectionDelegate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -136,9 +160,49 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The Connection delegate protocol defines the event methods available for channel Connection/DisConnection.</p>
 
-                        <a href="Protocols/MediaPlayerDelegate.html" class="slightly-smaller">See more</a>
+                        <a href="Protocols/ConnectionDelegate.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ConnectionDelegate</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P9SmartView19AudioPlayerDelegate"></a>
+                    <a name="//apple_ref/swift/Protocol/AudioPlayerDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P9SmartView19AudioPlayerDelegate">AudioPlayerDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Audio Player delegate protocol defines the event methods available for a Audio.</p>
+
+                        <a href="Protocols/AudioPlayerDelegate.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AudioPlayerDelegate</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -176,6 +240,70 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ChannelDelegate</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P9SmartView19VideoPlayerDelegate"></a>
+                    <a name="//apple_ref/swift/Protocol/VideoPlayerDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P9SmartView19VideoPlayerDelegate">VideoPlayerDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Video Player delegate protocol defines the event methods available for a Video.</p>
+
+                        <a href="Protocols/VideoPlayerDelegate.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">VideoPlayerDelegate</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P9SmartView19PhotoPlayerDelegate"></a>
+                    <a name="//apple_ref/swift/Protocol/PhotoPlayerDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P9SmartView19PhotoPlayerDelegate">PhotoPlayerDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Photo Player delegate protocol defines the event methods available for a Photo.</p>
+
+                        <a href="Protocols/PhotoPlayerDelegate.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PhotoPlayerDelegate</span><span class="p">:</span> <span class="kd">class</span></code></pre>
 
                         </div>
                       </div>
@@ -226,8 +354,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-05-31)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-09-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

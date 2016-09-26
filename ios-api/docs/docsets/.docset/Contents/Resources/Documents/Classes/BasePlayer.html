@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ChannelEvent Enum Reference</title>
+    <title>BasePlayer Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/ChannelEvent" class="dashAnchor"></a>
-    <a title="ChannelEvent Enum Reference"></a>
+    <a name="//apple_ref/swift/Class/BasePlayer" class="dashAnchor"></a>
+    <a title="BasePlayer Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (93% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        ChannelEvent Enum Reference
+        BasePlayer Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -141,18 +141,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>ChannelEvent</h1>
+            <h1>BasePlayer</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ChannelEvent</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">BasePlayer</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>This emumeration defines the notification options for a channel, this is an
-alternative to the ChannelDelegate protocol.</p>
-
-<p>Use this channel event enumeration in conjunction with the channel.on(&hellip;) and channel.off(&hellip;)
-methods in order to receive the notifications in a closure in the main thread</p>
+            <p>Base class for audio, video and photo player</p>
 
           </section>
           <section class="section task-group-section">
@@ -161,9 +157,9 @@ methods in order to receive the notifications in a closure in the main thread</p
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9SmartView12ChannelEvent7ConnectFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Connect" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9SmartView12ChannelEvent7ConnectFMS0_S0_">Connect</a>
+                    <a name="/s:vC9SmartView10BasePlayer18connectionDelegateXwGSqPS_18ConnectionDelegate__"></a>
+                    <a name="//apple_ref/swift/Property/connectionDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SmartView10BasePlayer18connectionDelegateXwGSqPS_18ConnectionDelegate__">connectionDelegate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -171,14 +167,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The on connect event</p>
+                        <p>The Connection delegate protocol defines the event methods available for channel Connection/DisConnection.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Connect</span> <span class="o">=</span> <span class="s">"ms.channel.connect"</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">connectionDelegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConnectionDelegate.html">ConnectionDelegate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
 
                         </div>
                       </div>
@@ -188,13 +184,20 @@ methods in order to receive the notifications in a closure in the main thread</p
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/APIs%20for%20Common%20Use,%20Objective%20C%20+%20Swift"></a>
+                <a name="//apple_ref/swift/Section/APIs for Common Use, Objective C + Swift" class="dashAnchor"></a>
+                <a href="#/APIs%20for%20Common%20Use,%20Objective%20C%20+%20Swift">
+                  <h3 class="section-name">APIs for Common Use, Objective C + Swift</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9SmartView12ChannelEvent10DisconnectFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Disconnect" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9SmartView12ChannelEvent10DisconnectFMS0_S0_">Disconnect</a>
+                    <a name="/s:FC9SmartView10BasePlayer10disconnectFS0_FTGSqFT5errorGSqCSo7NSError__T___T_"></a>
+                    <a name="//apple_ref/swift/Method/disconnect(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView10BasePlayer10disconnectFS0_FTGSqFT5errorGSqCSo7NSError__T___T_">disconnect(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -202,30 +205,75 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The on disconnect event</p>
+                        <p>Disconnects to the channel. This method will asynchronously call the delegate&rsquo;s onDisconnect method and post a
+ChannelEvent.
+- parameter completionHandler: callback handler of OnDisconnect</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Disconnect</span> <span class="o">=</span> <span class="s">"ms.channel.disconnect"</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">disconnect</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">((</span><span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>callback handler of OnDisconnect</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView10BasePlayer4playFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/play()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView10BasePlayer4playFS0_FT_T_">play()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Play last sent media contents.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">play</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9SmartView12ChannelEvent13ClientConnectFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/ClientConnect" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9SmartView12ChannelEvent13ClientConnectFMS0_S0_">ClientConnect</a>
+                    <a name="/s:FC9SmartView10BasePlayer5pauseFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/pause()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView10BasePlayer5pauseFS0_FT_T_">pause()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -233,30 +281,26 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A client connect event</p>
+                        <p>Pause currently playing media.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">ClientConnect</span> <span class="o">=</span> <span class="s">"ms.channel.clientConnect"</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">pause</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9SmartView12ChannelEvent16ClientDisconnectFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/ClientDisconnect" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9SmartView12ChannelEvent16ClientDisconnectFMS0_S0_">ClientDisconnect</a>
+                    <a name="/s:FC9SmartView10BasePlayer4stopFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView10BasePlayer4stopFS0_FT_T_">stop()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -264,30 +308,26 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>client disconnect event</p>
+                        <p>Stop currently playing media.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">ClientDisconnect</span> <span class="o">=</span> <span class="s">"ms.channel.clientDisconnect"</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9SmartView12ChannelEvent7MessageFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Message" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9SmartView12ChannelEvent7MessageFMS0_S0_">Message</a>
+                    <a name="/s:FC9SmartView10BasePlayer4muteFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/mute()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView10BasePlayer4muteFS0_FT_T_">mute()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -295,30 +335,26 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A text message was received</p>
+                        <p>Mute the volume of player on a connected device.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Message</span> <span class="o">=</span> <span class="s">"ms.channel.message"</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">mute</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9SmartView12ChannelEvent4DataFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Data" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9SmartView12ChannelEvent4DataFMS0_S0_">Data</a>
+                    <a name="/s:FC9SmartView10BasePlayer6unMuteFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/unMute()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView10BasePlayer6unMuteFS0_FT_T_">unMute()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -326,30 +362,26 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A binary data message was received</p>
+                        <p>UnMute the volume of player on a connected device.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Data</span> <span class="o">=</span> <span class="s">"ms.channel.data"</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">unMute</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9SmartView12ChannelEvent12UnauthorizedFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Unauthorized" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9SmartView12ChannelEvent12UnauthorizedFMS0_S0_">Unauthorized</a>
+                    <a name="/s:FC9SmartView10BasePlayer9getVolumeFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/getVolume()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView10BasePlayer9getVolumeFS0_FT_T_">getVolume()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -357,30 +389,26 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Connection to channel failed due to authorization issue (for some specific channels)</p>
+                        <p>Request the volume of player on a connected device.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Unauthorized</span> <span class="o">=</span> <span class="s">"ms.channel.unauthorized"</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">getVolume</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9SmartView12ChannelEvent7TimeoutFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Timeout" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9SmartView12ChannelEvent7TimeoutFMS0_S0_">Timeout</a>
+                    <a name="/s:FC9SmartView10BasePlayer8previousFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/previous()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView10BasePlayer8previousFS0_FT_T_">previous()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -388,30 +416,26 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>C0nnection time out</p>
+                        <p>Request previous to the player on a connected device.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Timeout</span> <span class="o">=</span> <span class="s">"ms.channel.timeOut"</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">previous</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9SmartView12ChannelEvent5ErrorFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Error" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9SmartView12ChannelEvent5ErrorFMS0_S0_">Error</a>
+                    <a name="/s:FC9SmartView10BasePlayer4nextFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/next()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView10BasePlayer4nextFS0_FT_T_">next()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -419,30 +443,26 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An error happened</p>
+                        <p>Request next to the player on a connected device.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Error</span> <span class="o">=</span> <span class="s">"ms.error"</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">next</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9SmartView12ChannelEvent5ReadyFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Ready" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9SmartView12ChannelEvent5ReadyFMS0_S0_">Ready</a>
+                    <a name="/s:FC9SmartView10BasePlayer9setVolumeFS0_FVSs5UInt8T_"></a>
+                    <a name="//apple_ref/swift/Method/setVolume(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView10BasePlayer9setVolumeFS0_FVSs5UInt8T_">setVolume(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -450,30 +470,73 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The host app is ready to send or receive messages</p>
+                        <p>Set volume on device playing media.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Ready</span> <span class="o">=</span> <span class="s">"ms.channel.ready"</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">setVolume</span><span class="p">(</span><span class="nv">volume</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>volume</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Integer value between 0 and 100.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView10BasePlayer8volumeUpFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/volumeUp()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView10BasePlayer8volumeUpFS0_FT_T_">volumeUp()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>increase volume of the player by 1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">volumeUp</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9SmartView12ChannelEvent4PingFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Ping" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9SmartView12ChannelEvent4PingFMS0_S0_">Ping</a>
+                    <a name="/s:FC9SmartView10BasePlayer10volumeDownFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/volumeDown()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView10BasePlayer10volumeDownFS0_FT_T_">volumeDown()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -481,14 +544,14 @@ methods in order to receive the notifications in a closure in the main thread</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Channel Ping event</p>
+                        <p>decrease volume of the player by 1.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Ping</span> <span class="o">=</span> <span class="s">"ms:channel.ping"</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">volumeDown</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>

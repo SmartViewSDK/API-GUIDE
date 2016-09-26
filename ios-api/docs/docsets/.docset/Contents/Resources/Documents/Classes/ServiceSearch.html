@@ -14,7 +14,7 @@
     <a title="ServiceSearch Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (58% documented)</p>
+        <p><a href="../index.html"> Docs</a> (93% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -34,6 +34,12 @@
                 <a href="../Classes/Application.html">Application</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AudioPlayer.html">AudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BasePlayer.html">BasePlayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Channel.html">Channel</a>
               </li>
               <li class="nav-group-task">
@@ -43,13 +49,22 @@
                 <a href="../Classes/MediaPlayer.html">MediaPlayer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/MediaPlayer/PlayerNotice.html">– PlayerNotice</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Message.html">Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PhotoPlayer.html">PhotoPlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Service.html">Service</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ServiceSearch.html">ServiceSearch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VideoPlayer.html">VideoPlayer</a>
               </li>
             </ul>
           </li>
@@ -102,13 +117,22 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Protocols/AudioPlayerDelegate.html">AudioPlayerDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/ChannelDelegate.html">ChannelDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/MediaPlayerDelegate.html">MediaPlayerDelegate</a>
+                <a href="../Protocols/ConnectionDelegate.html">ConnectionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PhotoPlayerDelegate.html">PhotoPlayerDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ServiceSearchDelegate.html">ServiceSearchDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VideoPlayerDelegate.html">VideoPlayerDelegate</a>
               </li>
             </ul>
           </li>
@@ -150,7 +174,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">ServiceSearchDelegate</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ServiceSearchDelegate.html">ServiceSearchDelegate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
 
                         </div>
                       </div>
@@ -197,16 +221,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>request for TV list found on Network/BLE.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">ServiceSearch</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getServices</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/Service.html">Service</a></span><span class="p">]</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>returns TV List.</p>
+
                       </div>
                     </section>
                   </div>
@@ -336,7 +365,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Start the search</p>
+                        <p>Start discovering TV on Network/Bluetooth</p>
 
                       </div>
                       <div class="declaration">
@@ -363,16 +392,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>check bluetooth searching is on or off</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">ServiceSearch</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isSearchingBLE</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if bluetooth discovery on otherwise false</p>
+
                       </div>
                     </section>
                   </div>
@@ -401,6 +435,11 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>returns &lsquo;True&rsquo; if using BLE otherwise &lsquo;False&rsquo;</p>
+
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -428,6 +467,11 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>True</p>
+
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -444,7 +488,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Stops the search</p>
+                        <p>Stops the Device discovery.</p>
 
                       </div>
                       <div class="declaration">
@@ -463,8 +507,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-05-31)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-09-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
