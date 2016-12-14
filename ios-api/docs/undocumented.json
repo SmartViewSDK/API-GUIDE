@@ -1,138 +1,166 @@
 {
   "warnings": [
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/ChannelClient.swift",
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/AudioPlayer.swift",
+      "line": 27,
+      "symbol": "AudioPlayerDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/Channel.swift",
+      "line": 196,
+      "symbol": "Channel.completionQueue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/Channel.swift",
+      "line": 430,
+      "symbol": "Channel.setSecurityMode(security:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/ChannelClient.swift",
       "line": 86,
       "symbol": "==(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 68,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 66,
       "symbol": "MediaPlayer.PlayerNotice.PlayerState.Play",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 69,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 67,
       "symbol": "MediaPlayer.PlayerNotice.PlayerState.Pause",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 70,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 68,
       "symbol": "MediaPlayer.PlayerNotice.PlayerState.Stop",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 71,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 69,
       "symbol": "MediaPlayer.PlayerNotice.PlayerState.Mute",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 72,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 70,
       "symbol": "MediaPlayer.PlayerNotice.PlayerState.Unmute",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 73,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 71,
       "symbol": "MediaPlayer.PlayerNotice.PlayerState.FF",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 74,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 72,
       "symbol": "MediaPlayer.PlayerNotice.PlayerState.RWD",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 75,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 73,
       "symbol": "MediaPlayer.PlayerNotice.PlayerState.SeekTo",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 76,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 74,
       "symbol": "MediaPlayer.PlayerNotice.PlayerState.SetVolume",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 86,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 83,
       "symbol": "MediaPlayer.PlayerNotice.VideoState.StreamCompleted",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 87,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 84,
       "symbol": "MediaPlayer.PlayerNotice.VideoState.CurrentPlayTime",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 88,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 85,
       "symbol": "MediaPlayer.PlayerNotice.VideoState.TotalDuration",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 89,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 86,
       "symbol": "MediaPlayer.PlayerNotice.VideoState.BufferingStart",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 90,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 87,
       "symbol": "MediaPlayer.PlayerNotice.VideoState.BufferingProgress",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 91,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 88,
       "symbol": "MediaPlayer.PlayerNotice.VideoState.BufferingComplete",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
-      "line": 92,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/MediaPlayer.swift",
+      "line": 89,
       "symbol": "MediaPlayer.PlayerNotice.VideoState.VideoIsCued",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/Service.swift",
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/Service.swift",
       "line": 42,
       "symbol": "Service.discoveryType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK/SmartViewSDK/public/Service.swift",
-      "line": 531,
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/Service.swift",
+      "line": 515,
+      "symbol": "Service.isSecurityModeSupported(completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK/SmartViewSDK/public/Service.swift",
+      "line": 571,
       "symbol": "==(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/servicebusinesssmartview/Desktop/MJ_SPACE/minjoo/XCODE70/SmartViewSDK"
+  "source_directory": "/Volumes/MJ IOS 1/iOS/XCode8.1/SDK1214/XCODE80/SmartViewSDK"
 }

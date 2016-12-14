@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PlayerNotice Struct Reference</title>
+    <title>VideoRepeatMode Enum Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset="utf-8">
@@ -11,9 +11,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Struct/PlayerNotice" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Enum/VideoRepeatMode" class="dashAnchor"></a>
 
-    <a title="PlayerNotice Struct Reference"></a>
+    <a title="VideoRepeatMode Enum Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -29,7 +29,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../../index.html"> Reference</a>
       <img class="carat" src="../../img/carat.png" />
-      PlayerNotice Struct Reference
+      VideoRepeatMode Enum Reference
     </p>
 
     <div class="content-wrapper">
@@ -156,14 +156,15 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>PlayerNotice</h1>
+            <h1>VideoRepeatMode</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PlayerNotice</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">enum</span> <span class="kt">VideoRepeatMode</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                 </div>
               </div>
-            <p>Namespace for constants that describe notices from media player on TV.</p>
+            <p>Enum for Player list mode
+Supported mode: repeatAll,repeatOff,repeatSingle</p>
 
           </div>
         </section>
@@ -175,9 +176,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvVC9SmartView11MediaPlayer12PlayerNotice14PlayerStateKeySS"></a>
-                    <a name="//apple_ref/swift/Variable/PlayerStateKey" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvVC9SmartView11MediaPlayer12PlayerNotice14PlayerStateKeySS">PlayerStateKey</a>
+                    <a name="/s:FOC9SmartView11VideoPlayer15VideoRepeatMode9repeatOffFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/repeatOff" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOC9SmartView11VideoPlayer15VideoRepeatMode9repeatOffFMS1_S1_">repeatOff</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -185,26 +186,30 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Player state key</p>
+                        <p>Repeat Off</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">PlayerStateKey</span> <span class="o">=</span> <span class="s">"state"</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">repeatOff</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvVC9SmartView11MediaPlayer12PlayerNotice13VideoStateKeySS"></a>
-                    <a name="//apple_ref/swift/Variable/VideoStateKey" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvVC9SmartView11MediaPlayer12PlayerNotice13VideoStateKeySS">VideoStateKey</a>
+                    <a name="/s:FOC9SmartView11VideoPlayer15VideoRepeatMode12repeatSingleFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/repeatSingle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOC9SmartView11VideoPlayer15VideoRepeatMode12repeatSingleFMS1_S1_">repeatSingle</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -212,26 +217,30 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Video state key</p>
+                        <p>Repeat Single</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">VideoStateKey</span> <span class="o">=</span> <span class="s">"Video State"</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">repeatSingle</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvVC9SmartView11MediaPlayer12PlayerNotice8ErrorKeySS"></a>
-                    <a name="//apple_ref/swift/Variable/ErrorKey" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvVC9SmartView11MediaPlayer12PlayerNotice8ErrorKeySS">ErrorKey</a>
+                    <a name="/s:FOC9SmartView11VideoPlayer15VideoRepeatMode9repeatAllFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/repeatAll" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOC9SmartView11VideoPlayer15VideoRepeatMode9repeatAllFMS1_S1_">repeatAll</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -239,71 +248,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Error key</p>
+                        <p>repeat All</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">ErrorKey</span> <span class="o">=</span> <span class="s">"error"</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:VVC9SmartView11MediaPlayer12PlayerNotice11PlayerState"></a>
-                    <a name="//apple_ref/swift/Struct/PlayerState" class="dashAnchor"></a>
-                    <a class="token" href="#/s:VVC9SmartView11MediaPlayer12PlayerNotice11PlayerState">PlayerState</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Possible values for PlayerStateKey (<q>state</q>).</p>
-
-                        <a href="../../Classes/MediaPlayer/PlayerNotice/PlayerState.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PlayerState</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:VVC9SmartView11MediaPlayer12PlayerNotice10VideoState"></a>
-                    <a name="//apple_ref/swift/Struct/VideoState" class="dashAnchor"></a>
-                    <a class="token" href="#/s:VVC9SmartView11MediaPlayer12PlayerNotice10VideoState">VideoState</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Possible values for VideoStateKey (<q>Video State</q>).
-Some of the values are just prefixes for actual values, e.g. CurrentPlayTime is prefix for <q>currentplaytime:322</q>.</p>
-
-                        <a href="../../Classes/MediaPlayer/PlayerNotice/VideoState.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VideoState</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">repeatAll</span></code></pre>
 
                         </div>
                       </div>
