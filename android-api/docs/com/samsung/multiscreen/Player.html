@@ -168,7 +168,7 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Player.html#disconnect-boolean-com.samsung.multiscreen.Result-">disconnect</a></span>(boolean&nbsp;stopOnDisconnect,
-          <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>
+          <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;callback)</code>
 <div class="block">Disconnect from the media player.</div>
 </td>
 </tr>
@@ -359,14 +359,14 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <li class="blockList">
 <h4>disconnect</h4>
 <pre>public&nbsp;void&nbsp;disconnect(boolean&nbsp;stopOnDisconnect,
-                       <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</pre>
+                       <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;callback)</pre>
 <div class="block">Disconnect from the media player.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>stopOnDisconnect</code> - stop the media player application, if true. Otherwise, disconnect
 
  and leave the media player application running.</dd>
-<dd><code>result</code> - the callback to invoke with the result of the disconnect request</dd>
+<dd><code>callback</code> - the callback to invoke with the result of the disconnect request</dd>
 </dl>
 </li>
 </ul>
@@ -476,7 +476,7 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <ul class="blockList">
 <li class="blockList">
 <h4>resumeApplicationInForeground</h4>
-<pre>public&nbsp;void&nbsp;resumeApplicationInForeground()</pre>
+<pre>public final&nbsp;void&nbsp;resumeApplicationInForeground()</pre>
 <div class="block">resumes TV widget/application from background process.</div>
 </li>
 </ul>

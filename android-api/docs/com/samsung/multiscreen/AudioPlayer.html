@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -193,24 +193,53 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#addToList-android.net.Uri-java.lang.String-java.lang.String-android.net.Uri-long-">addToList</a></span>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;ContentUrl,
+         <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;title,
+         <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;albumName,
+         <a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;albumArt,
+         long&nbsp;endTime)</code>
+<div class="block">public API to add content to list.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#clearList--">clearList</a></span>()</code>
 <div class="block">public API to delete whole list.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#getList--">getList</a></span>()</code>
 <div class="block">public API to fetch the list.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#playContent-android.net.Uri-long-com.samsung.multiscreen.Result-">playContent</a></span>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
+           long&nbsp;endTime,
+           <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">public API to play audio content</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#playContent-android.net.Uri-com.samsung.multiscreen.Result-">playContent</a></span>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
            <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
 <div class="block">public API to play audio content</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#playContent-android.net.Uri-java.lang.String-java.lang.String-android.net.Uri-long-com.samsung.multiscreen.Result-">playContent</a></span>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
+           <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;title,
+           <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;albumName,
+           <a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;albumArtUrl,
+           long&nbsp;endTime,
+           <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
+<div class="block">public API to play audio content</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#playContent-android.net.Uri-java.lang.String-java.lang.String-android.net.Uri-com.samsung.multiscreen.Result-">playContent</a></span>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
            <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;title,
@@ -220,26 +249,38 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 <div class="block">public API to play audio content</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#removeFromList-android.net.Uri-">removeFromList</a></span>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri)</code>
 <div class="block">public API to delete content from list.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#repeat--">repeat</a></span>()</code>
 <div class="block">toggles repeat mode on/off</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#seekTo-int-java.util.concurrent.TimeUnit-">seekTo</a></span>(int&nbsp;time,
       <a href="http://d.android.com/reference/java/util/concurrent/TimeUnit.html?is-external=true" title="class or interface in java.util.concurrent">TimeUnit</a>&nbsp;timeUnit)</code>
 <div class="block">seeks audio to specified time position.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#setRepeat-com.samsung.multiscreen.Player.RepeatMode-">setRepeat</a></span>(<a href="../../../com/samsung/multiscreen/Player.RepeatMode.html" title="enum in com.samsung.multiscreen">Player.RepeatMode</a>&nbsp;mode)</code>
+<div class="block">sets repeat mode to ON or OFF</div>
+</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#setShuffle-boolean-">setShuffle</a></span>(boolean&nbsp;mode)</code>
+<div class="block">sets shuffle mode to ON (true) or OFF (false)</div>
+</td>
+</tr>
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/AudioPlayer.html#shuffle--">shuffle</a></span>()</code>
 <div class="block">toggles shuffle mode on/off</div>
@@ -290,6 +331,24 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 </dl>
 </li>
 </ul>
+<a name="playContent-android.net.Uri-long-com.samsung.multiscreen.Result-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>playContent</h4>
+<pre>public&nbsp;void&nbsp;playContent(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
+                        long&nbsp;endTime,
+                        <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</pre>
+<div class="block">public API to play audio content</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>contentUrl</code> - uri of the audio to be played</dd>
+<dd><code>endTime</code> - play end time (in seconds)</dd>
+<dd><code>result</code> - callback</dd>
+</dl>
+</li>
+</ul>
 <a name="playContent-android.net.Uri-java.lang.String-java.lang.String-android.net.Uri-com.samsung.multiscreen.Result-">
 <!--   -->
 </a>
@@ -306,8 +365,32 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>contentUrl</code> - uri of the audio to be played</dd>
 <dd><code>title</code> - title of the audio</dd>
+<dd><code>albumName</code> - album name</dd>
+<dd><code>albumArtUrl</code> - album art url</dd>
+<dd><code>result</code> - callback</dd>
+</dl>
+</li>
+</ul>
+<a name="playContent-android.net.Uri-java.lang.String-java.lang.String-android.net.Uri-long-com.samsung.multiscreen.Result-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>playContent</h4>
+<pre>public&nbsp;void&nbsp;playContent(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
+                        <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;title,
+                        <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;albumName,
+                        <a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;albumArtUrl,
+                        long&nbsp;endTime,
+                        <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</pre>
+<div class="block">public API to play audio content</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>contentUrl</code> - uri of the audio to be played</dd>
+<dd><code>title</code> - title of the audio</dd>
 <dd><code>albumName</code> - Album Name</dd>
 <dd><code>albumArtUrl</code> - album art url</dd>
+<dd><code>endTime</code> - play end time (in seconds)</dd>
 <dd><code>result</code> - callback</dd>
 </dl>
 </li>
@@ -338,6 +421,22 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 <div class="block">toggles repeat mode on/off</div>
 </li>
 </ul>
+<a name="setRepeat-com.samsung.multiscreen.Player.RepeatMode-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRepeat</h4>
+<pre>public&nbsp;void&nbsp;setRepeat(<a href="../../../com/samsung/multiscreen/Player.RepeatMode.html" title="enum in com.samsung.multiscreen">Player.RepeatMode</a>&nbsp;mode)</pre>
+<div class="block">sets repeat mode to ON or OFF</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>mode</code> - repeatOff       : repeat OFF
+                    repeatSingle    : repeat Single
+                    repeatAll       : repeat All</dd>
+</dl>
+</li>
+</ul>
 <a name="shuffle--">
 <!--   -->
 </a>
@@ -346,6 +445,20 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 <h4>shuffle</h4>
 <pre>public&nbsp;void&nbsp;shuffle()</pre>
 <div class="block">toggles shuffle mode on/off</div>
+</li>
+</ul>
+<a name="setShuffle-boolean-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setShuffle</h4>
+<pre>public&nbsp;void&nbsp;setShuffle(boolean&nbsp;mode)</pre>
+<div class="block">sets shuffle mode to ON (true) or OFF (false)</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>mode</code> - true - shuffle ON and vice-versa.</dd>
+</dl>
 </li>
 </ul>
 <a name="getList--">
@@ -413,6 +526,28 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 <dd><code>title</code> - title of the content</dd>
 <dd><code>albumName</code> - albumName of the content</dd>
 <dd><code>albumArt</code> - albumArt image url related to the content</dd>
+</dl>
+</li>
+</ul>
+<a name="addToList-android.net.Uri-java.lang.String-java.lang.String-android.net.Uri-long-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addToList</h4>
+<pre>public&nbsp;void&nbsp;addToList(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;ContentUrl,
+                      <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;title,
+                      <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;albumName,
+                      <a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;albumArt,
+                      long&nbsp;endTime)</pre>
+<div class="block">public API to add content to list.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>ContentUrl</code> - uri of the content</dd>
+<dd><code>title</code> - title of the content</dd>
+<dd><code>albumName</code> - albumName of the content</dd>
+<dd><code>albumArt</code> - albumArt image url related to the content</dd>
+<dd><code>endTime</code> - play end time (in seconds)</dd>
 </dl>
 </li>
 </ul>
