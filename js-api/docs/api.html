@@ -693,6 +693,7 @@ search.start();
 <li><a href="#Application+connect">.connect(attributes, callback)</a></li>
 <li><a href="#Application+disconnect">.disconnect([exitOnRemote], [callback])</a></li>
 <li><a href="#Application+install">.install(callback)</a></li>
+<li><a href="#Channel+setSecurityMode">.setSecurityMode(true)</a></li>
 <li><a href="#Channel+publish">.publish(event, [message], [target], [payload])</a></li>
 <li><a href="#EventEmitter+on">.on(type, listener)</a> ⇒</li>
 <li><a href="#EventEmitter+once">.once(type, listener)</a> ⇒</li>
@@ -881,6 +882,26 @@ The stop/exit command is only sent if you are the last connected client</p>
   }
  });
 </code></pre>
+<p><a name="Channel+setSecurityMode"></a></p>
+<h3 id="application-setsecuritymode-true-">application.setSecurityMode(true)</h3>
+<p>set to the security mode</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#Application">Application</a></code>  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>true</td>
+<td><code>flag</code></td>
+<td>is SSL enabled</td>
+</tr>
+</tbody>
+</table>
 <p><a name="Channel+publish"></a></p>
 <h3 id="application-publish-event-message-target-payload-">application.publish(event, [message], [target], [payload])</h3>
 <p>Publish an event message to the specified target or targets.
@@ -1130,6 +1151,7 @@ Targets can be in the for of a clients id, an array of client ids or one of the 
 <li><a href="#Channel+isConnected">.isConnected</a> : <code>Boolean</code></li>
 <li><a href="#Channel+connectionTimeout">.connectionTimeout</a> : <code>Boolean</code></li>
 <li><a href="#Channel+connect">.connect(attributes, callback)</a></li>
+<li><a href="#Channel+setSecurityMode">.setSecurityMode(true)</a></li>
 <li><a href="#Channel+disconnect">.disconnect(callback)</a></li>
 <li><a href="#Channel+publish">.publish(event, [message], [target], [payload])</a></li>
 <li><a href="#EventEmitter+on">.on(type, listener)</a> ⇒</li>
@@ -1202,6 +1224,26 @@ channel.connectionTimeout = 0; // stops the health check
   console.info(client.attributes.name+&#39;, you are now connected&#39;);
 });
 </code></pre>
+<p><a name="Channel+setSecurityMode"></a></p>
+<h3 id="channel-setsecuritymode-true-">channel.setSecurityMode(true)</h3>
+<p>set to the security mode</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#Channel">Channel</a></code>  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>true</td>
+<td><code>flag</code></td>
+<td>is SSL enabled</td>
+</tr>
+</tbody>
+</table>
 <p><a name="Channel+disconnect"></a></p>
 <h3 id="channel-disconnect-callback-">channel.disconnect(callback)</h3>
 <p>Disconnects from the channel</p>

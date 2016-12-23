@@ -124,6 +124,7 @@ msf.remote('http://host:port/api/v2/',function(err, service){
     * [.connect(attributes, callback)](#Application+connect)
     * [.disconnect([exitOnRemote], [callback])](#Application+disconnect)
     * [.install(callback)](#Application+install)
+    * [.setSecurityMode(true)](#Channel+setSecurityMode)
     * [.publish(event, [message], [target], [payload])](#Channel+publish)
     * [.on(type, listener)](#EventEmitter+on) ⇒
     * [.once(type, listener)](#EventEmitter+once) ⇒
@@ -254,6 +255,17 @@ app.connect({name:'Jason'}, function(err, client){
   }
  });
 ```
+<a name="Channel+setSecurityMode"></a>
+
+### application.setSecurityMode(true)
+set to the security mode
+
+**Kind**: instance method of <code>[Application](#Application)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| true | <code>flag</code> | is SSL enabled |
+
 <a name="Channel+publish"></a>
 
 ### application.publish(event, [message], [target], [payload])
@@ -405,6 +417,7 @@ channel.on('clientDisconnect',function(client){
     * [.isConnected](#Channel+isConnected) : <code>Boolean</code>
     * [.connectionTimeout](#Channel+connectionTimeout) : <code>Boolean</code>
     * [.connect(attributes, callback)](#Channel+connect)
+    * [.setSecurityMode(true)](#Channel+setSecurityMode)
     * [.disconnect(callback)](#Channel+disconnect)
     * [.publish(event, [message], [target], [payload])](#Channel+publish)
     * [.on(type, listener)](#EventEmitter+on) ⇒
@@ -469,6 +482,17 @@ channel.connect({name:'Wheezy'},function(err, client){
   console.info(client.attributes.name+', you are now connected');
 });
 ```
+<a name="Channel+setSecurityMode"></a>
+
+### channel.setSecurityMode(true)
+set to the security mode
+
+**Kind**: instance method of <code>[Channel](#Channel)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| true | <code>flag</code> | is SSL enabled |
+
 <a name="Channel+disconnect"></a>
 
 ### channel.disconnect(callback)
