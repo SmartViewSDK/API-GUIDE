@@ -1,1 +1,4 @@
 theme: jekyll-theme-tactile
+title: SmartViewSDK API Guide
+description: Smart View SDK let your mobile communicate and control your Samsung Smart TV and facilitate application development for devices based on iOS, Android and JavaScript. The Mobile device once connected, can communicate with your TV through the Smart View Framework 
+show_downloads: true 
