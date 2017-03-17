@@ -159,7 +159,7 @@
             <h1>ServiceSearch</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">ServiceSearch</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">ServiceSearch</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">TVDataManagerProtocol</span></code></pre>
 
                 </div>
               </div>
@@ -383,7 +383,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Start discovering TV on Network/Bluetooth</p>
+                        <p>Start searching for devices</p>
 
                       </div>
                       <div class="declaration">
@@ -393,6 +393,53 @@
                           <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">()</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView13ServiceSearch5startFSbT_"></a>
+                    <a name="//apple_ref/swift/Method/start(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView13ServiceSearch5startFSbT_">start(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start searching for devices, overloaded function</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="n">_</span> <span class="nv">showStandByTv</span> <span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>showStandByTv</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>false if Standby devices not to be shown</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -520,6 +567,84 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView13ServiceSearch14getStandByModeFT_Sb"></a>
+                    <a name="//apple_ref/swift/Method/getStandByMode()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView13ServiceSearch14getStandByModeFT_Sb">getStandByMode()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns what status is set to StandbyMode.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">getStandByMode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SmartView13ServiceSearch19clearStandbyDevicesFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/clearStandbyDevices()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SmartView13ServiceSearch19clearStandbyDevicesFT_T_">clearStandbyDevices()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Clear the standby devices from the DB</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">clearStandbyDevices</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>None</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>No parameter required</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -528,7 +653,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2016 <a class="link" href="http://developer.samsung.com/tv/develop/extension-libraries/smart-view-sdk/introduction/" target="_blank" rel="external">SmartViewSDK</a>. All rights reserved. (Last updated: 2016-12-14)</p>
+      <p>&copy; 2017 <a class="link" href="http://developer.samsung.com/tv/develop/extension-libraries/smart-view-sdk/introduction/" target="_blank" rel="external">SmartViewSDK</a>. All rights reserved. (Last updated: 2017-03-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

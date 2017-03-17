@@ -158,13 +158,22 @@
             
             <a href='#smartviewsdk-ios-apis' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='smartviewsdk-ios-apis'>SmartViewSDK iOS APIs</h1>
 
-<p>This api is the iOS component of the SmartView SDK.</p>
-
 <p>The iOS APIs provide methods and functionalities of the Smart View for iOS to users. With these APIs, we can communicate with Samsung Smart TV using an iOS device.</p>
 
 <p>For more information, see the <a href="http://developer.samsung.com/tv/develop/extension-libraries/smart-view-sdk/introduction/">Samsung Developers</a></p>
 
 <p>The swift API is used for mobile applications, to connect to SmartTV applications. </p>
+<a href='#download-library' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='download-library'>Download library</h2>
+
+<ul>
+<li><p><a href="http://developer.samsung.com/tv/develop/tools/extension-libraries/smartview-sdk-download">Download</a> the SmartViewSDK iOS Sender SDK.</p></li>
+<li><p>Install by CocoaPods</p>
+
+<ul>
+<li>Add pod to Xcode project Open ‘Podfile’ and add smart-view-sdk for pod name</li>
+<li>pod ‘smart-view-sdk’</li>
+</ul></li>
+</ul>
 <a href='#jazzy-docs' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='jazzy-docs'>Jazzy Docs</h2>
 
 <p>API reference docs are <a href="https://smartviewsdk.github.io/API-GUIDE/ios-api/docs/">online API GUIDE</a> and included  &lsquo;docs&rsquo;</p>
@@ -196,33 +205,33 @@
 </ul>
 
 <p>While discovering compatible TVs, you should display a list of discovered services to the user, allow them to select one and then communicate with the service selected. At any time you can get the list of the last discovered services.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">serviceSearch</span> <span class="o">=</span> <span class="kt">Service</span><span class="o">.</span><span class="nf">search</span><span class="p">()</span>
-<span class="nf">init</span> <span class="p">()</span> <span class="p">{</span>
+<a href='#code-snippet-with-examples-swift' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='code-snippet-with-examples-swift'>Code Snippet with Examples (Swift):</h3>
+<pre class="highlight swift"><code>    <span class="k">let</span> <span class="nv">serviceSearch</span> <span class="o">=</span> <span class="kt">Service</span><span class="o">.</span><span class="nf">search</span><span class="p">()</span>
+    <span class="nf">init</span> <span class="p">()</span> <span class="p">{</span>
     <span class="c1">// The delegate is implemented as a weak reference</span>
     <span class="n">serviceSearch</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
     <span class="n">serviceSearch</span><span class="o">.</span><span class="nf">start</span><span class="p">()</span>
-<span class="p">}</span>
+    <span class="p">}</span>
 
-<span class="c1">// MARK: - ServiceSearchDelegate -</span>
+    <span class="c1">// MARK: - ServiceSearchDelegate -</span>
 
-<span class="kd">func</span> <span class="nf">onServiceFound</span><span class="p">(</span><span class="nv">service</span><span class="p">:</span> <span class="kt">Service</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Update your UI by using the serviceDiscovery.services array</span>
-<span class="p">}</span>
+    <span class="kd">func</span> <span class="nf">onServiceFound</span><span class="p">(</span><span class="nv">service</span><span class="p">:</span> <span class="kt">Service</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Update your UI by using the serviceDiscovery.services array</span>
+    <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">onServiceLost</span><span class="p">(</span><span class="nv">service</span><span class="p">:</span> <span class="kt">Service</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Update your UI by using the serviceDiscovery.services array</span>
-<span class="p">}</span>
+    <span class="kd">func</span> <span class="nf">onServiceLost</span><span class="p">(</span><span class="nv">service</span><span class="p">:</span> <span class="kt">Service</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Update your UI by using the serviceDiscovery.services array</span>
+    <span class="p">}</span>
 
-<span class="c1">// After the user connects to a device stop the search by calling</span>
-<span class="n">serviceSearch</span><span class="o">.</span><span class="nf">search</span><span class="p">(</span> <span class="p">)</span>
-</code></pre>
+    <span class="c1">// After the user connects to a device stop the search by calling</span>
+    <span class="n">serviceSearch</span><span class="o">.</span><span class="nf">search</span><span class="p">(</span> <span class="p">)</span>
+<span class="kt">Alternatively</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">subscribe</span> <span class="k">for</span> <span class="nf">notifications</span> <span class="p">(</span><span class="kt">Please</span> <span class="n">unsubscribe</span> <span class="n">when</span> <span class="n">you</span> <span class="n">are</span> <span class="n">done</span><span class="p">)</span><span class="o">.</span>
 
-<p>Alternatively, you can subscribe for notifications (Please unsubscribe when you are done).</p>
-<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">didFindServiceObserver</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="k">var</span> <span class="nv">didRemoveServiceObserver</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+    <span class="k">var</span> <span class="nv">didFindServiceObserver</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+    <span class="k">var</span> <span class="nv">didRemoveServiceObserver</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 
-<span class="kd">func</span> <span class="nf">listenForNotifications</span><span class="p">()</span>
-<span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">listenForNotifications</span><span class="p">()</span>
+    <span class="p">{</span>
     <span class="n">didFindServiceObserver</span> <span class="o">=</span> <span class="kt">NSNotificationCenter</span><span class="o">.</span><span class="nf">defaultCenter</span><span class="p">()</span><span class="o">.</span><span class="nf">addObserverForName</span><span class="p">(</span><span class="kt">MSDidFindService</span><span class="p">,</span> <span class="nv">object</span><span class="p">:</span> <span class="n">serviceSearch</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">NSOperationQueue</span><span class="o">.</span><span class="nf">mainQueue</span><span class="p">(</span> <span class="p">))</span> <span class="p">{</span> <span class="p">(</span><span class="n">notification</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
         <span class="k">let</span> <span class="nv">serviceSearch</span> <span class="o">=</span> <span class="n">notification</span><span class="o">.</span><span class="n">object</span> <span class="k">as?</span> <span class="kt">ServiceSearch</span>
         <span class="k">let</span> <span class="nv">service</span> <span class="o">=</span> <span class="n">notification</span><span class="o">.</span><span class="n">userInfo</span><span class="p">[</span><span class="s">"service"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">Service</span>
@@ -232,91 +241,119 @@
         <span class="k">let</span> <span class="nv">serviceSearch</span> <span class="o">=</span> <span class="n">notification</span><span class="o">.</span><span class="n">object</span> <span class="k">as?</span> <span class="kt">ServiceSearch</span>
         <span class="k">let</span> <span class="nv">service</span> <span class="o">=</span> <span class="n">notification</span><span class="o">.</span><span class="n">userInfo</span><span class="p">[</span><span class="s">"service"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">Service</span>
     <span class="p">}</span>
-<span class="p">}</span>
+    <span class="p">}</span>
 </code></pre>
 
-<p>If you want to use notifications, closures and the main queue for your notification you can use the equivalent convenience method call.</p>
-<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">on</span><span class="p">(</span><span class="nv">notificationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">performClosure</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSNotification</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyObject</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">off</span><span class="p">(</span><span class="nv">observer</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span>
+<p>If you want to use notifications, closures and the main queue for your notification you can use the equivalent<br>
+convenience method call.</p>
+<pre class="highlight swift"><code>    <span class="kd">public</span> <span class="kd">func</span> <span class="nf">on</span><span class="p">(</span><span class="nv">notificationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">performClosure</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSNotification</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyObject</span>
+    <span class="kd">public</span> <span class="kd">func</span> <span class="nf">off</span><span class="p">(</span><span class="nv">observer</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span>
 </code></pre>
 
-<p>On selecting a service from the list of available services, you can interact with the service to get additional information about the device or you can either start, stop, install, and retrieve information about applications.</p>
+<p>On selecting a service from the list of available services, you can interact with the service to get additional<br>
+information about the device or you can either start, stop, install, and retrieve information about applications.<br>
+Both installed applications and cloud applications can be launched.</p>
+<a href='#ble-device-discovery' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='ble-device-discovery'>BLE Device Discovery</h3>
 
-<p>Both installed applications and cloud applications can be launched.</p>
-<a href='#ble-device-discovery' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='ble-device-discovery'>BLE Device Discovery</h2>
+<p>SmartView framework supports discovery of Samsung devices via Bluetooth Low Energy in the surrounding area. BLE<br>
+discovery allows user to see the list of available TVs that user can connect with. BLE discovery does not support<br>
+retrieving the Service objects using Bluetooth currently.  </p>
 
-<p>SmartView framework supports discovery of Samsung devices via Bluetooth Low Energy in the surrounding area.</p>
-
-<p>BLE discovery allows user to see the list of available TVs that user can connect with. BLE discovery does not support retrieving the Service objects using Bluetooth currently.</p>
-
-<p>The following example demonstrates how to launch BLE discovery and get the discovered devices.</p>
-
-<p>Launch the search for BLE devices:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">serviceSearch</span> <span class="o">=</span> <span class="kt">Service</span><span class="o">.</span><span class="nf">search</span><span class="p">()</span>        
-<span class="n">serviceSearch</span><span class="o">.</span><span class="nf">startUsingBLE</span><span class="p">()</span>
+<p>The following example demonstrates how to launch BLE discovery and get the discovered devices.<br>
+Launch the search for BLE devices:</p>
+<pre class="highlight swift"><code>
+    <span class="k">let</span> <span class="nv">serviceSearch</span> <span class="o">=</span> <span class="kt">Service</span><span class="o">.</span><span class="nf">search</span><span class="p">()</span>        
+    <span class="n">serviceSearch</span><span class="o">.</span><span class="nf">startUsingBLE</span><span class="p">()</span>
 </code></pre>
 
 <p>Implement corresponding delegate method to handle the discovery events:</p>
-<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">onFoundOnlyBLE</span><span class="p">(</span><span class="kt">NameOfTV</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
-<span class="p">{</span>
+<pre class="highlight swift"><code>
+    <span class="kd">func</span> <span class="nf">onFoundOnlyBLE</span><span class="p">(</span><span class="kt">NameOfTV</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+    <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Found BLE device: </span><span class="se">\(</span><span class="kt">NameOfTV</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="c1">// Update your UI...</span>
-<span class="p">}</span>
+    <span class="p">}</span>
 </code></pre>
-<a href='#launch' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='launch'>Launch</h2>
+<a href='#launch' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='launch'>Launch</h3>
 
-<p>Once you have a selected device or “service” , you can now interact with both installed TV apps and Cloud apps.
-- Working With Installed TV Apps</p>
+<p>Once you have a selected device or “service” , you can now interact with both installed TV apps and Cloud apps.  </p>
 
-<p>Before you can work with an installed TV app, you must first know the “ID” of the TV application you want to work with.</p>
-
-<p>If your TV app is still in development, you can use the folder name of your app as the id. Once the TV app has been released into Samsung Apps, you must use the supplied app id.</p>
+<p><b>Working With Installed TV Apps</b><br>
+Before you can work with an installed TV app, you must first know the “ID” of the TV application you want to work<br>
+with.If your TV app is still in development, you can use the folder name of your app as the id. Once the TV app<br>
+ has been released into Samsung Apps, you must use the supplied app id.</p>
 
 <p>There are four core functions for working with installed apps</p>
 
 <ol>
-<li>Service.createApplication (id: AnyObject, channelURI: String, args: [String:AnyObject]?) : Get reference to your TV app by app ID</li>
+<li>Service.createApplication (id: AnyObject, channelURI: String, args: [String:AnyObject]?) : Get reference to<br>
+your TV app by app ID</li>
 <li>application.start (completionHandler: ((success: Bool, error: NSError?) -&gt; Void)?) : Launch the TV app</li>
 <li>application.stop (completionHandler: ((success: Bool, error: NSError?) -&gt; Void)?) : Terminate the TV app</li>
 <li>application.install (completionHandler: ((success: Bool, error: NSError?) -&gt; Void)?) : Install the TV app.</li>
 </ol>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">uri</span><span class="p">:</span> <span class="kt">NSURL</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="nf">getConfig</span><span class="p">()</span><span class="o">.</span><span class="nf">getWebAppUri</span><span class="p">();</span>
-<span class="k">let</span> <span class="nv">channelID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"com.samsung.multiscreen.helloworld"</span>
+<pre class="highlight swift"><code>
+    <span class="k">let</span> <span class="nv">uri</span><span class="p">:</span> <span class="kt">NSURL</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="nf">getConfig</span><span class="p">()</span><span class="o">.</span><span class="nf">getWebAppUri</span><span class="p">();</span>
+    <span class="k">let</span> <span class="nv">channelID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"com.samsung.multiscreen.helloworld"</span>
 
-<span class="k">let</span> <span class="nv">msApplication</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="nf">createApplication</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="nv">channelURI</span><span class="p">:</span> <span class="n">channelID</span><span class="p">,</span> <span class="nv">args</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span><span class="o">!</span>
-<span class="n">msApplication</span><span class="o">.</span><span class="n">connectionTimeout</span> <span class="o">=</span> <span class="mf">5.0</span>
+    <span class="k">let</span> <span class="nv">msApplication</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="nf">createApplication</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="nv">channelURI</span><span class="p">:</span> <span class="n">channelID</span><span class="p">,</span> <span class="nv">args</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span><span class="o">!</span>
+    <span class="n">msApplication</span><span class="o">.</span><span class="n">connectionTimeout</span> <span class="o">=</span> <span class="mf">5.0</span>
 
-<span class="c1">// Launch the application without connecting to it</span>
-<span class="n">msApplication</span><span class="o">.</span><span class="nf">start</span><span class="p">()</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
+    <span class="c1">// Launch the application without connecting to it</span>
+    <span class="n">msApplication</span><span class="o">.</span><span class="nf">start</span><span class="p">()</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
     <span class="k">if</span> <span class="n">success</span>  <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"App started"</span><span class="p">)</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"App cannot start: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
-<span class="p">}</span>
+    <span class="p">}</span>
 </code></pre>
-<a href='#connect' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='connect'>Connect</h2>
+<a href='#connect' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='connect'>Connect</h3>
 
-<p>You need to be connected to TV to communicate with any application</p>
+<p>You need to be connected to TV to communicate with any application. If you connect an application without calling<br>
+start() method it will be launched automatically before connecting.</p>
+<pre class="highlight swift"><code>
+    <span class="k">let</span> <span class="nv">uri</span><span class="p">:</span> <span class="kt">NSURL</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="nf">getConfig</span><span class="p">()</span><span class="o">.</span><span class="nf">getWebAppUri</span><span class="p">();</span>
+    <span class="k">let</span> <span class="nv">channelID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"com.samsung.multiscreen.helloworld"</span>
 
-<p>If you connect an application without calling start() method it will be launched automatically before connecting.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">uri</span><span class="p">:</span> <span class="kt">NSURL</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="nf">getConfig</span><span class="p">()</span><span class="o">.</span><span class="nf">getWebAppUri</span><span class="p">();</span>
-<span class="k">let</span> <span class="nv">channelID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"com.samsung.multiscreen.helloworld"</span>
-
-<span class="k">let</span> <span class="nv">msApplication</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="nf">createApplication</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="nv">channelURI</span><span class="p">:</span> <span class="n">channelID</span><span class="p">,</span> <span class="nv">args</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span><span class="o">!</span>
-<span class="n">msApplication</span><span class="o">.</span><span class="n">connectionTimeout</span> <span class="o">=</span> <span class="mf">5.0</span>
-<span class="n">msApplication</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="n">attrs</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="nv">msApplication</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="nf">createApplication</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="nv">channelURI</span><span class="p">:</span> <span class="n">channelID</span><span class="p">,</span> <span class="nv">args</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span><span class="o">!</span>
+    <span class="n">msApplication</span><span class="o">.</span><span class="n">connectionTimeout</span> <span class="o">=</span> <span class="mf">5.0</span>
+    <span class="n">msApplication</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="n">attrs</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
     <span class="k">if</span> <span class="n">client</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"App connected"</span><span class="p">)</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"App cannot connect: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
-<span class="p">}</span>
+    <span class="p">}</span>
 </code></pre>
-<a href='#wow-wake-on-wireless-lan' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='wow-wake-on-wireless-lan'>WoW (Wake on Wireless LAN)</h2>
+<a href='#wow-wake-on-wireless-lan' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='wow-wake-on-wireless-lan'>WoW (Wake on Wireless LAN)</h3>
+<a href='#latest-smartviewsdk-include-enhaned-wow-feature' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='latest-smartviewsdk-include-enhaned-wow-feature'>Latest SmartViewSDK include Enhaned WOW feature</h4>
+
+<p><strong>SDK 2.4.0</strong> makes your app enable WOW function automatically without NO source code change.</p>
+
+<ol>
+<li><p>If your app have been connected once,</p>
+
+<ul>
+<li>SDK manage the TV device list for WOW feature</li>
+<li>SDK handles below Basic UI scenario</li>
+</ul></li>
+<li><p>Basic UI scenario</p>
+
+<ul>
+<li>Turn the TV off (put to standby).</li>
+<li>Appears marked as “TV_NAME(standby)” within 7 seconds.</li>
+<li>Select the TV.</li>
+<li>The TV power on</li>
+<li>The TV WebApp(or DMP) should start loading on the TV.</li>
+<li>The video should start playing on the TV.</li>
+</ul></li>
+</ol>
+<a href='#implement-manually-lower-version-of-sdk-2-4-0' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='implement-manually-lower-version-of-sdk-2-4-0'>Implement manually lower version of SDK 2.4.0</h4>
 
 <p>1.How to get MAC Address:</p>
-<pre class="highlight swift"><code>    <span class="n">service</span><span class="o">!.</span><span class="nf">getDeviceInfo</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span>
+<pre class="highlight swift"><code>
+    <span class="n">service</span><span class="o">!.</span><span class="nf">getDeviceInfo</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span>
     <span class="p">{</span>
             <span class="p">(</span><span class="n">deviceInfo</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>         
 
@@ -328,11 +365,12 @@
 </code></pre>
 
 <p>2.Wake up TV:</p>
-<pre class="highlight swift"><code><span class="kt">Service</span><span class="o">.</span><span class="kt">WakeOnWirelessLan</span><span class="p">(</span><span class="n">macAddr</span><span class="p">)</span>
+<pre class="highlight swift"><code>    <span class="kt">Service</span><span class="o">.</span><span class="kt">WakeOnWirelessLan</span><span class="p">(</span><span class="n">macAddr</span><span class="p">)</span>
 </code></pre>
 
 <p>3.Wake up TV and connect:</p>
-<pre class="highlight swift"><code><span class="c1">//Default timeout for connection is used Service.DEFAULT_WOW_TIMEOUT_VALUE:NSTimeInterval = 6</span>
+<pre class="highlight swift"><code>
+    <span class="c1">//Default timeout for connection is used Service.DEFAULT_WOW_TIMEOUT_VALUE:NSTimeInterval = 6</span>
 
     <span class="kt">Service</span><span class="o">.</span><span class="kt">WakeOnWirelessAndConnect</span><span class="p">(</span><span class="n">macAddr</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{(</span><span class="n">service</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
             <span class="k">if</span><span class="p">(</span><span class="n">service</span> <span class="o">!=</span> <span class="kc">nil</span><span class="p">)</span>
@@ -347,8 +385,8 @@
         <span class="p">}</span>
     <span class="p">})</span>
 
-<span class="c1">//Connect using custom timeout</span>
-<span class="c1">//let timeout:NSTimeInterval = 12</span>
+    <span class="c1">//Connect using custom timeout</span>
+    <span class="c1">//let timeout:NSTimeInterval = 12</span>
 
       <span class="kt">Service</span><span class="o">.</span><span class="kt">WakeOnWirelessAndConnect</span><span class="p">(</span><span class="n">macAddr</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">timeout</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{(</span><span class="n">service</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
                  <span class="o">.....</span>      
@@ -357,24 +395,24 @@
 </code></pre>
 <a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
 
-<p>Copyright &copy; 2014 Samsung Electronics</p>
+<p>Copyright &copy; 2017 Samsung Electronics</p>
 
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the <q>Software</q>), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy<br>
+of this software and associated documentation files (the <q>Software</q>), to deal<br>
+in the Software without restriction, including without limitation the rights<br>
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>
+copies of the Software, and to permit persons to whom the Software is<br>
+furnished to do so, subject to the following conditions:  </p>
 
-<p>The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.</p>
+<p>The above copyright notice and this permission notice shall be included in<br>
+all copies or substantial portions of the Software.  </p>
 
-<p>THE SOFTWARE IS PROVIDED <q>AS IS</q>, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+<p>THE SOFTWARE IS PROVIDED <q>AS IS</q>, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN<br>
 THE SOFTWARE.</p>
 
           </div>
@@ -384,7 +422,7 @@ THE SOFTWARE.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2016 <a class="link" href="http://developer.samsung.com/tv/develop/extension-libraries/smart-view-sdk/introduction/" target="_blank" rel="external">SmartViewSDK</a>. All rights reserved. (Last updated: 2016-12-14)</p>
+      <p>&copy; 2017 <a class="link" href="http://developer.samsung.com/tv/develop/extension-libraries/smart-view-sdk/introduction/" target="_blank" rel="external">SmartViewSDK</a>. All rights reserved. (Last updated: 2017-03-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
