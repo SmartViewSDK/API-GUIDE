@@ -99,22 +99,26 @@
 <!--   -->
 </a>
 <div class="block"><div class="overview">
-<p>This API is the Android component of the SmartView SDK.
-For more information, see the <a href="http://developer.samsung.com/tv/develop/extension-libraries/smart-view-sdk/introduction/">Samsung Developers</a>.</p>
-<h2 id="include-in-your-android-project">Include in your Android project</h2>
-<p>Copy <code>/dist/android-smartview-sdk-2.x.x.jar</code> to your libs folder and link as normal.
+<h1><a id="Samsung_SmartView_Adroid_SDK_0"></a>Samsung SmartView Adroid SDK</h1>
+<p>This API is the Android component of the SmartView SDK.<br>
+For more information, see <a href="http://developer.samsung.com/tv/develop/extension-libraries/smart-view-sdk/introduction/">Samsung Developers.</a></p>
+<h2><a id="Download_library_5"></a>Download library</h2>
+<ul>
+<li><a href="http://developer.samsung.com/tv/develop/tools/extension-libraries/smartview-sdk-download">Download</a> the SmartViewSDK Android Sender SDK.</li>
+</ul>
+<h2><a id="Include_in_your_Android_project_8"></a>Include in your Android project</h2>
+<p>Copy <code>/dist/android-smartview-sdk-2.x.x.jar</code> to your libs folder and link as normal.<br>
 Supports Eclipse or Android Studio projects.</p>
-
-<h2 id="javadocs">Javadocs</h2>
+<h2><a id="Javadocs_13"></a>Javadocs</h2>
 <p>API reference docs are <a href="https://smartviewsdk.github.io/API-GUIDE/android-api/docs/index.html">online</a> and included in <code>/dist/docs/</code>.</p>
-<h1 id="api-usage">API Usage</h1>
+<h1><a id="API_Usage_16"></a>API Usage</h1>
 <p>The API supports three main features:</p>
 <ul>
 <li><strong>Discover</strong>: Discover a compatible Samsung SmartTV on your network</li>
 <li><strong>Connect</strong>: Connect and launch applications on the SmartTV</li>
 <li><strong>Communicate</strong>: Communicate with a SmartTV application and other mobile devices.</li>
 </ul>
-<h2 id="discover">Discover</h2>
+<h2><a id="Discover_24"></a>Discover</h2>
 <p>You can discover a compatible Samsung SmartTV on your network using the <a href="https://smartviewsdk.github.io/API-GUIDE/android-api/docs/com/samsung/multiscreen/Search.html">Search</a> class. The workflow is:</p>
 <ol>
 <li>Start the Discovery Process</li>
@@ -123,15 +127,15 @@ Supports Eclipse or Android Studio projects.</p>
 </ol>
 <p>Generally, while the discovery process is running, you should display a list of discovered services to your user, and allow them to select one. You can get a list of the discovered services at any time, even after the discovery process is stopped.</p>
 <p>Example:</p>
-<pre><code class="lang-java">
+<pre><code class="language-java">
     <span class="hljs-comment">// Get an instance of Search</span>
     Search search = Service.search(getContext());
-
+    
     <span class="hljs-comment">// Add a listener for the service found event</span>
     search.setOnServiceFoundListener(
         <span class="hljs-keyword">new</span> OnServiceFoundListener() {
-
-            <span class="hljs-annotation">&#64;Override</span>
+                
+            <span class="hljs-annotation">@Override</span>
             <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFound</span><span class="hljs-params">(Service service)</span> </span>{
                 Log.d(LOGTAG, <span class="hljs-string">"Search.onFound() service: "</span> + service.toString());
 
@@ -140,12 +144,12 @@ Supports Eclipse or Android Studio projects.</p>
             }
         }
     );
-
+    
     <span class="hljs-comment">// Add a listener for the service lost event</span>
     search.setOnServiceLostListener(
         <span class="hljs-keyword">new</span> OnServiceLostListener() {
-
-            <span class="hljs-annotation">&#64;Override</span>
+                
+            <span class="hljs-annotation">@Override</span>
             <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLost</span><span class="hljs-params">(Service service)</span> </span>{
                 Log.d(LOGTAG, <span class="hljs-string">"Search.onLost() service: "</span> + service.toString());
 
@@ -153,21 +157,21 @@ Supports Eclipse or Android Studio projects.</p>
             }
         }
     );
-
+    
     <span class="hljs-comment">// Start the discovery process</span>
     search.start();
 
     <span class="hljs-comment">// Do something while we wait for services to be discovered.</span>
     ...
-
+    
     <span class="hljs-comment">// Stop the discovery process after some amount of time, preferably once the user </span>
     <span class="hljs-comment">// has selected a service to work with.</span>
     search.stop();
 </code></pre>
-<h2 id="connect">Connect</h2>
-<p>Once a device or &quot;service&quot; has been discovered, you can interact with the service to get additional information about the device, or start, stop, install, and retrieve information about applications. Both installed applications and cloud applications can be launched.</p>
+<h2><a id="Connect_79"></a>Connect</h2>
+<p>Once a device or “service” has been discovered, you can interact with the service to get additional information about the device, or start, stop, install, and retrieve information about applications. Both installed applications and cloud applications can be launched.</p>
 <p>Example:</p>
-<pre><code class="lang-java">
+<pre><code class="language-java">
     <span class="hljs-comment">// Example uri</span>
     Uri url = Uri.parse(<span class="hljs-string">"http://dev-multiscreen-examples.s3-website-us-west-1.amazonaws.com/examples/helloworld/tv/"</span>); 
 
@@ -182,7 +186,7 @@ Supports Eclipse or Android Studio projects.</p>
     <span class="hljs-comment">// Listen for the connect event</span>
     application.setOnConnectListener(<span class="hljs-keyword">new</span> OnConnectListener() {
 
-        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-annotation">@Override</span>
         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onConnect</span><span class="hljs-params">(Client client)</span> </span>{
             Log.d(LOGTAG, <span class="hljs-string">"Application.onConnect() client: "</span> + client.toString());                
         }
@@ -193,36 +197,36 @@ Supports Eclipse or Android Studio projects.</p>
     <span class="hljs-comment">// be launched automatically.</span>
     application.connect(<span class="hljs-keyword">new</span> Result&lt;Client&gt;() {
 
-        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-annotation">@Override</span>
         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(Client client)</span> </span>{
             Log.d(LOGTAG, <span class="hljs-string">"Application connect onSuccess() client: "</span> + client.toString());
-
+            
             <span class="hljs-comment">// The application is launched, and is ready to accept </span>
             <span class="hljs-comment">// messages.</span>
         }
 
-        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-annotation">@Override</span>
         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(Error error)</span> </span>{
             Log.d(LOGTAG, <span class="hljs-string">"Application connect onError() error: "</span> + error.toString());
-
+            
             <span class="hljs-comment">// Uh oh. Handle the error.</span>
         }
     );
 </code></pre>
-<h2 id="communicate">Communicate</h2>
+<h2><a id="Communicate_128"></a>Communicate</h2>
 <p>After connecting and launching the application on the TV, otherwise known as the host, the client can now publish both text and binary messages to any and/or all connected clients.</p>
-<h3 id="publishing-messages">Publishing Messages</h3>
+<h3><a id="Publishing_Messages_131"></a>Publishing Messages</h3>
 <p>To send or publish a message, the client must supply:</p>
 <ol>
 <li><strong>Message Event</strong>: Application defined event describing the message</li>
 <li><strong>Message Data</strong>: A string or object representing the message data</li>
 </ol>
 <p>Example:</p>
-<pre><code class="lang-java">
+<pre><code class="language-java">
     <span class="hljs-comment">// Note: The TV application is designated as the "HOST"</span>
     String event = <span class="hljs-string">"say"</span>;
     String messageData = <span class="hljs-string">"Hello World!"</span>;
-
+    
     <span class="hljs-comment">// Send a message to the TV application only, by default.</span>
     application.publish(event, messageData);
 
@@ -243,56 +247,56 @@ Supports Eclipse or Android Studio projects.</p>
     <span class="hljs-comment">// Send a message to a list of clients</span>
     List&lt;Client&gt; clients = ... <span class="hljs-comment">// You can create any combination list of clients</span>
     application.publish(event, messageData, clients);
-
+    
     <span class="hljs-comment">// Send a binary message to the TV application only, by default.</span>
     <span class="hljs-keyword">byte</span>[] payload = {<span class="hljs-number">0x00</span>, <span class="hljs-number">0x01</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x03</span>};
     application.publish(event, messageData, payload);
 </code></pre>
-<h3 id="receiving-messages">Receiving Messages</h3>
+<h3><a id="Receiving_Messages_171"></a>Receiving Messages</h3>
 <p>To receive a message on the connected channel, the client must simply add a message listener.</p>
 <p>Example:</p>
-<pre><code class="lang-java">
+<pre><code class="language-java">
     <span class="hljs-comment">// The event that this client is interested in receiving published messages.</span>
     String event = <span class="hljs-string">"say"</span>;
 
     <span class="hljs-comment">// Listen for a message by event</span>
     application.addOnMessageListener(event, <span class="hljs-keyword">new</span> OnMessageListener() {
-
-        <span class="hljs-annotation">&#64;Override</span>
+        
+        <span class="hljs-annotation">@Override</span>
         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(Message message)</span> </span>{
             Log.d(LOGTAG, <span class="hljs-string">"Application.onMessage() message: "</span> + message.toString());
-
+            
             <span class="hljs-comment">// Got a message with some data or a binary payload.</span>
         }
     });
 </code></pre>
-<h2 id="advanced-options">Advanced Options</h2>
+<h2><a id="Advanced_Options_193"></a>Advanced Options</h2>
 <p>Advanced options are not required to be called by default, but may allow the developer flexibility in the design and implementation of the application.</p>
-<h3 id="disconnect">disconnect</h3>
+<h3><a id="disconnect_196"></a>disconnect</h3>
 <p>By default, the specified application will stop automatically when this is the last client to disconnect. To disable this behavior, call <code>disconnect(false, ...)</code>.</p>
 <p>Example:</p>
-<pre><code class="lang-java">
+<pre><code class="language-java">
     <span class="hljs-comment">// Disconnect from the application. The application will continue to run on the TV, even </span>
     <span class="hljs-comment">// if this was the last connected client.</span>
     application.disconnect(<span class="hljs-keyword">false</span>, <span class="hljs-keyword">new</span> Result&lt;Client&gt;() {
 
-        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-annotation">@Override</span>
         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(Client client)</span> </span>{
             Log.d(LOGTAG, <span class="hljs-string">"Application disconnect onSuccess() client: "</span> + client.toString());
-
+            
             <span class="hljs-comment">// The application will continue to run on the TV.</span>
         }
 
-        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-annotation">@Override</span>
         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(Error error)</span> </span>{
             Log.d(LOGTAG, <span class="hljs-string">"Application disconnect onError() error: "</span> + error.toString());
         }
     });
 </code></pre>
-<h3 id="install">install</h3>
-<p>To install an application, you must create an application with the specified application id issued by Samsung when the application is submitted. See the <a href="http://developer.samsung.com/tv/distribute">App Submission</a> pages at the Samsung Developer Forum for more information on the app submission process.</p>
+<h3><a id="install_221"></a>install</h3>
+<p>To install an application, you must create an application with the specified application id issued by Samsung when the application is submitted. See the <a href="http://www.samsungdforum.com/Support/Appsubmisson">App Submission</a> pages at the Samsung Developer Forum for more information on the app submission process.</p>
 <p>Example:</p>
-<pre><code class="lang-java">
+<pre><code class="language-java">
     <span class="hljs-comment">// Example app id</span>
     String appId = <span class="hljs-string">"111299000796"</span>;
 
@@ -306,34 +310,138 @@ Supports Eclipse or Android Studio projects.</p>
     <span class="hljs-comment">// The user will still have to acknowledge by selecting "install" using the TV remote.</span>
     application.install(<span class="hljs-keyword">new</span> Result&lt;Boolean&gt;() {
 
-        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-annotation">@Override</span>
         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(Boolean result)</span> </span>{
             Log.d(LOGTAG, <span class="hljs-string">"Application install onSuccess() result: "</span> + result.toString());
 
             <span class="hljs-comment">// Application installed</span>
         }
 
-        <span class="hljs-annotation">&#64;Override</span>
+        <span class="hljs-annotation">@Override</span>
         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(Error error)</span> </span>{
             Log.d(LOGTAG, <span class="hljs-string">"Application install onError() error: "</span> + error.toString());
-
+            
             <span class="hljs-comment">// Uh oh. Handle the error.</span>
         }
     });
 </code></pre>
-<h1 id="build-instructions">Build Instructions</h1>
-<p>If you need to modify the code and/or build the project yourself, you can do this with gradle or maven. Both methods will output the jar and docs in the /dist folder.</p>
+<h3><a id="WoW_Wake_on_Wireless_LAN_257"></a>WoW (Wake on Wireless LAN)</h3>
+<h4><a id="Latest_SmartViewSDK_include_Enhaned_WOW_feature_259"></a>Latest SmartViewSDK include Enhaned WOW feature</h4>
+<p><strong>SDK 2.4.0</strong> makes your app enable WOW function automatically without NO source code change.</p>
+<ol>
+<li>
+<p>If your app have been connected once,</p>
 <ul>
-<li><strong>Gradle</strong>: type: <code>gradle build dist javadoc</code></li>
-<li><strong>Maven</strong>: type: <code>mvn install javadoc:javadoc</code></li>
+<li>SDK manage the TV device list for WOW feature</li>
+<li>SDK handles below Basic UI scenario</li>
 </ul>
-<p><strong>Note:</strong></p>
-<p>For gradle builds, you will need to specify the Android API location in a &#39;local.properties&#39; file in the project root directory. Gradle will find the Android API <code>compileSdkVersion</code> defined in the &#39;build.gradle&#39; file in the specified directory.</p>
-<p>Example &#39;local.properties&#39;:</p>
-<pre><code class="lang-properties">
-    sdk.dir=/Users/plin/android-sdk
+</li>
+<li>
+<p>Basic UI scenario</p>
+<ul>
+<li>Turn the TV off (put to standby).</li>
+<li>Appears marked as “TV_NAME(standby)” within 7 seconds.</li>
+<li>Select the TV.</li>
+<li>The TV power on</li>
+<li>The TV WebApp(or DMP) should start loading on the TV.</li>
+<li>The video should start playing on the TV.</li>
+</ul>
+</li>
+</ol>
+<h4><a id="Implement_manually_lower_version_of_SDK_240_277"></a>Implement manually lower version of SDK 2.4.0</h4>
+<p>1.How to get MAC Address:</p>
+<pre><code class="language-java">Service service.getDeviceInfo(<span class="hljs-keyword">new</span> Result&lt;Device&gt;() {
+    <span class="hljs-annotation">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(Device device)</span> </span>{
+           <span class="hljs-keyword">if</span> (device != <span class="hljs-keyword">null</span>)
+               String wifiMac = device.getWifiMac();
+
+           SharedPreferences.Editor editor = getSharedPreferences(<span class="hljs-string">"WoWMacs"</span>, <span class="hljs-number">0</span>).edit();
+
+           editor.putString(name, wifiMac);
+
+           editor.commit();
+
+    }
+
+    <span class="hljs-annotation">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(com.samsung.multiscreen.Error error)</span> </span>{
+    }
+});
 </code></pre>
-<p>For maven builds, you will need to install the relevant Android API in a local repository and modify the <code>local.repo.path</code> in the Maven &#39;pom.xml&#39;. Also, ensure that the ANDROID_HOME environment variable is set to point to your Android SDK directory and the JDK &#39;tools.jar&#39; file is available. Modify the <code>jdk.tools.path</code> property accordingly. For Mac, using the default 1.6 JDK, the tools classes are located in the &#39;$JAVA_HOME/Classes/classes.jar&#39; file.</p>
+<p>2.Wake up TV:</p>
+<pre><code class="language-java">String mac = getSharedPreferences(<span class="hljs-string">"WoWMacs"</span>, <span class="hljs-number">0</span>).getString(service.getName(), <span class="hljs-number">0</span>);
+
+Service.WakeOnWirelessLan(mac);
+</code></pre>
+<p>3.Wake up TV and connect:</p>
+<pre><code class="language-java"><span class="hljs-comment">//For connection is used default timeout: Service.DEFAULT_WOW_TIMEOUT_VALUE = 60000</span>
+
+String mac = getSharedPreferences(<span class="hljs-string">"WoWMacs"</span>, <span class="hljs-number">0</span>).getString(service.getName(), <span class="hljs-number">0</span>);
+
+String uri = getSharedPreferences(<span class="hljs-string">"WoWIps"</span>, <span class="hljs-number">0</span>).getString(mac, <span class="hljs-number">0</span>);
+
+Service.WakeOnWirelessAndConnect(mac, uri, <span class="hljs-keyword">new</span> Result&lt;Service&gt;() {
+    <span class="hljs-annotation">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(Service service)</span> </span>{
+        <span class="hljs-keyword">if</span> (service != <span class="hljs-keyword">null</span>) {
+            Application application = service.createApplication(<span class="hljs-string">"YOUR_APP_ID"</span>,<span class="hljs-string">"YOUR_CHANNEL_ID"</span>);
+
+            application.connect(<span class="hljs-keyword">new</span> Result&lt;Client&gt;() {
+
+                <span class="hljs-annotation">@Override</span>
+                <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(Client client)</span> </span>{
+                    <span class="hljs-keyword">if</span> (client != <span class="hljs-keyword">null</span>) {
+                        Log.d(<span class="hljs-string">"log"</span>, <span class="hljs-string">"onSuccess: "</span> + client.toString());
+                    }
+                }
+
+                <span class="hljs-annotation">@Override</span>
+                <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(com.samsung.multiscreen.Error error)</span> </span>{
+                    Log.d(<span class="hljs-string">"log"</span>, <span class="hljs-string">"onError: "</span> + error.getMessage());
+                }
+            });
+        }
+    }
+
+    <span class="hljs-annotation">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(com.samsung.multiscreen.Error error)</span> </span>{
+        Log.d(<span class="hljs-string">"log"</span>, <span class="hljs-string">"onError: "</span> + error.getMessage());
+    }
+
+});
+
+
+<span class="hljs-comment">//Connect using custom timeout:</span>
+
+<span class="hljs-keyword">int</span> timeout = <span class="hljs-number">120000</span>;
+
+Service.WakeOnWirelessAndConnect(mac, uri, timeout, <span class="hljs-keyword">new</span> Result&lt;Service&gt;()){
+
+....
+
+}
+
+
+</code></pre>
+<h2><a id="License_363"></a>License</h2>
+<p>Copyright © 2017 Samsung Electronics</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy<br>
+of this software and associated documentation files (the “Software”), to deal<br>
+in the Software without restriction, including without limitation the rights<br>
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>
+copies of the Software, and to permit persons to whom the Software is<br>
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in<br>
+all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN<br>
+THE SOFTWARE.</p>
+
 </div></div>
 </div>
 <!-- ======= START OF BOTTOM NAVBAR ====== -->

@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -100,12 +100,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../com/samsung/multiscreen/Player.html" title="class in com.samsung.multiscreen">com.samsung.multiscreen.Player</a></li>
-<li>
-<ul class="inheritance">
 <li>com.samsung.multiscreen.PhotoPlayer</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -115,8 +110,8 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">PhotoPlayer</span>
-extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in com.samsung.multiscreen">Player</a></pre>
-<div class="block">The <a href="../../../com/samsung/multiscreen/Application.html" title="class in com.samsung.multiscreen"><code>Application</code></a> class allows control Photo Player on TV side.
+extends <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">The <a href="../../../com/samsung/multiscreen/PhotoPlayer.html" title="class in com.samsung.multiscreen"><code>PhotoPlayer</code></a> class allows control Photo Player on TV side.
  It extends Player class and defines photo player functionality.</div>
 </li>
 </ul>
@@ -142,14 +137,13 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 <div class="block">Public Listener Interface for Photo Player Notice events</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink">com.samsung.multiscreen.Player.RepeatMode</span></code>
+<div class="block">Defines all possible values for Repeat.</div>
+</td>
+</tr>
 </table>
-<ul class="blockList">
-<li class="blockList"><a name="nested.classes.inherited.from.class.com.samsung.multiscreen.Player">
-<!--   -->
-</a>
-<h3>Nested classes/interfaces inherited from class&nbsp;com.samsung.multiscreen.<a href="../../../com/samsung/multiscreen/Player.html" title="class in com.samsung.multiscreen">Player</a></h3>
-<code><a href="../../../com/samsung/multiscreen/Player.RepeatMode.html" title="enum in com.samsung.multiscreen">Player.RepeatMode</a></code></li>
-</ul>
 </li>
 </ul>
 <!-- ========== METHOD SUMMARY =========== -->
@@ -197,18 +191,81 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#disconnect--">disconnect</a></span>()</code>
+<div class="block">Disconnect from the specified channel.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#disconnect-boolean-com.samsung.multiscreen.Result-">disconnect</a></span>(boolean&nbsp;stopOnDisconnect,
+          <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;callback)</code>
+<div class="block">Disconnect from the media player.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#disconnect-com.samsung.multiscreen.Result-">disconnect</a></span>(<a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>
+<div class="block">Disconnect from the specified channel.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#getControlStatus--">getControlStatus</a></span>()</code>
+<div class="block">fetches the control status - volume, mute, shuffle and repeat</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#getList--">getList</a></span>()</code>
 <div class="block">public API to fetch the list.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#isConnected--">isConnected</a></span>()</code>
+<div class="block">Returns if the channel is connected and the host is ready to listen
+
+ for messages.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#isDebug--">isDebug</a></span>()</code>
+<div class="block">Get whether debug is set.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#mute--">mute</a></span>()</code>
+<div class="block">Mute</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#next--">next</a></span>()</code>
+<div class="block">Launch Next Content</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#pause--">pause</a></span>()</code>
+<div class="block">Pause Content</div>
+</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#play--">play</a></span>()</code>
+<div class="block">Play Content</div>
+</td>
+</tr>
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#playContent-android.net.Uri-com.samsung.multiscreen.Result-">playContent</a></span>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
            <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;result)</code>
 <div class="block">public API to play photo content</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#playContent-android.net.Uri-java.lang.String-com.samsung.multiscreen.Result-">playContent</a></span>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;contentUrl,
            <a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;title,
@@ -216,38 +273,109 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 <div class="block">public API to play photo content</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i18" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#previous--">previous</a></span>()</code>
+<div class="block">Launch Previous Content</div>
+</td>
+</tr>
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#removeFromList-android.net.Uri-">removeFromList</a></span>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri)</code>
 <div class="block">public API to delete content from list.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i20" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#resumeApplicationInForeground--">resumeApplicationInForeground</a></span>()</code>
+<div class="block">resumes TV widget/application from background process.</div>
+</td>
+</tr>
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#setBackgroundMusic-android.net.Uri-">setBackgroundMusic</a></span>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;uri)</code>
 <div class="block">sets background audio in slide show.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#setSlideTimeout-int-">setSlideTimeout</a></span>(int&nbsp;slideTimeout)</code>
-<div class="block">sets slide show timeout period</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#setDebug-boolean-">setDebug</a></span>(boolean&nbsp;debug)</code>
+<div class="block">Get whether debug is set.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i23" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#setOnClientConnectListener-com.samsung.multiscreen.Channel.OnClientConnectListener-">setOnClientConnectListener</a></span>(<a href="../../../com/samsung/multiscreen/Channel.OnClientConnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnClientConnectListener</a>&nbsp;onClientConnectListener)</code>
+<div class="block">Set channel client connect Listener</div>
+</td>
+</tr>
+<tr id="i24" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#setOnClientDisconnectListener-com.samsung.multiscreen.Channel.OnClientDisconnectListener-">setOnClientDisconnectListener</a></span>(<a href="../../../com/samsung/multiscreen/Channel.OnClientDisconnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnClientDisconnectListener</a>&nbsp;onClientDisconnectListener)</code>
+<div class="block">Set channel client disconnect Listener</div>
+</td>
+</tr>
+<tr id="i25" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#setOnConnectListener-com.samsung.multiscreen.Channel.OnConnectListener-">setOnConnectListener</a></span>(<a href="../../../com/samsung/multiscreen/Channel.OnConnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnConnectListener</a>&nbsp;onConnectListener)</code>
+<div class="block">Set connect channel Listener</div>
+</td>
+</tr>
+<tr id="i26" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#setOnDisconnectListener-com.samsung.multiscreen.Channel.OnDisconnectListener-">setOnDisconnectListener</a></span>(<a href="../../../com/samsung/multiscreen/Channel.OnDisconnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnDisconnectListener</a>&nbsp;onDisconnectListener)</code>
+<div class="block">Set disconnect channel Listener</div>
+</td>
+</tr>
+<tr id="i27" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#setOnErrorListener-com.samsung.multiscreen.Channel.OnErrorListener-">setOnErrorListener</a></span>(<a href="../../../com/samsung/multiscreen/Channel.OnErrorListener.html" title="interface in com.samsung.multiscreen">Channel.OnErrorListener</a>&nbsp;onErrorListener)</code>
+<div class="block">Remove all listeners from remote control channel.</div>
+</td>
+</tr>
+<tr id="i28" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#setOnReadyListener-com.samsung.multiscreen.Channel.OnReadyListener-">setOnReadyListener</a></span>(<a href="../../../com/samsung/multiscreen/Channel.OnReadyListener.html" title="interface in com.samsung.multiscreen">Channel.OnReadyListener</a>&nbsp;OnReadyListener)</code>
+<div class="block">Set ready channel Listener</div>
+</td>
+</tr>
+<tr id="i29" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#setVolume-int-">setVolume</a></span>(int&nbsp;volume)</code>
+<div class="block">sets the volume</div>
+</td>
+</tr>
+<tr id="i30" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#stop--">stop</a></span>()</code>
+<div class="block">Stop Content</div>
+</td>
+</tr>
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#stopBackgroundMusic--">stopBackgroundMusic</a></span>()</code>
 <div class="block">stops background audio in slide show.</div>
 </td>
 </tr>
+<tr id="i32" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#unMute--">unMute</a></span>()</code>
+<div class="block">Un-mute</div>
+</td>
+</tr>
+<tr id="i33" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#volumeDown--">volumeDown</a></span>()</code>
+<div class="block">Decreases the volume by 1</div>
+</td>
+</tr>
+<tr id="i34" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/PhotoPlayer.html#volumeUp--">volumeUp</a></span>()</code>
+<div class="block">Increases the volume by 1</div>
+</td>
+</tr>
 </table>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.samsung.multiscreen.Player">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;com.samsung.multiscreen.<a href="../../../com/samsung/multiscreen/Player.html" title="class in com.samsung.multiscreen">Player</a></h3>
-<code><a href="../../../com/samsung/multiscreen/Player.html#disconnect--">disconnect</a>, <a href="../../../com/samsung/multiscreen/Player.html#disconnect-boolean-com.samsung.multiscreen.Result-">disconnect</a>, <a href="../../../com/samsung/multiscreen/Player.html#disconnect-com.samsung.multiscreen.Result-">disconnect</a>, <a href="../../../com/samsung/multiscreen/Player.html#getControlStatus--">getControlStatus</a>, <a href="../../../com/samsung/multiscreen/Player.html#isConnected--">isConnected</a>, <a href="../../../com/samsung/multiscreen/Player.html#isDebug--">isDebug</a>, <a href="../../../com/samsung/multiscreen/Player.html#mute--">mute</a>, <a href="../../../com/samsung/multiscreen/Player.html#next--">next</a>, <a href="../../../com/samsung/multiscreen/Player.html#pause--">pause</a>, <a href="../../../com/samsung/multiscreen/Player.html#play--">play</a>, <a href="../../../com/samsung/multiscreen/Player.html#previous--">previous</a>, <a href="../../../com/samsung/multiscreen/Player.html#resumeApplicationInForeground--">resumeApplicationInForeground</a>, <a href="../../../com/samsung/multiscreen/Player.html#setDebug-boolean-">setDebug</a>, <a href="../../../com/samsung/multiscreen/Player.html#setOnClientConnectListener-com.samsung.multiscreen.Channel.OnClientConnectListener-">setOnClientConnectListener</a>, <a href="../../../com/samsung/multiscreen/Player.html#setOnClientDisconnectListener-com.samsung.multiscreen.Channel.OnClientDisconnectListener-">setOnClientDisconnectListener</a>, <a href="../../../com/samsung/multiscreen/Player.html#setOnConnectListener-com.samsung.multiscreen.Channel.OnConnectListener-">setOnConnectListener</a>, <a href="../../../com/samsung/multiscreen/Player.html#setOnDisconnectListener-com.samsung.multiscreen.Channel.OnDisconnectListener-">setOnDisconnectListener</a>, <a href="../../../com/samsung/multiscreen/Player.html#setOnErrorListener-com.samsung.multiscreen.Channel.OnErrorListener-">setOnErrorListener</a>, <a href="../../../com/samsung/multiscreen/Player.html#setOnReadyListener-com.samsung.multiscreen.Channel.OnReadyListener-">setOnReadyListener</a>, <a href="../../../com/samsung/multiscreen/Player.html#setVolume-int-">setVolume</a>, <a href="../../../com/samsung/multiscreen/Player.html#stop--">stop</a>, <a href="../../../com/samsung/multiscreen/Player.html#unMute--">unMute</a>, <a href="../../../com/samsung/multiscreen/Player.html#volumeDown--">volumeDown</a>, <a href="../../../com/samsung/multiscreen/Player.html#volumeUp--">volumeUp</a></code></li>
-</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
@@ -300,20 +428,6 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 <dd><code>contentUrl</code> - uri of the photo to be played</dd>
 <dd><code>title</code> - title of the photo</dd>
 <dd><code>result</code> - callback</dd>
-</dl>
-</li>
-</ul>
-<a name="setSlideTimeout-int-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setSlideTimeout</h4>
-<pre>public&nbsp;void&nbsp;setSlideTimeout(int&nbsp;slideTimeout)</pre>
-<div class="block">sets slide show timeout period</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>slideTimeout</code> - slide show time-out period in milliseconds.</dd>
 </dl>
 </li>
 </ul>
@@ -422,7 +536,7 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 <a name="addOnMessageListener-com.samsung.multiscreen.PhotoPlayer.OnPhotoPlayerListener-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>addOnMessageListener</h4>
 <pre>public&nbsp;void&nbsp;addOnMessageListener(<a href="../../../com/samsung/multiscreen/PhotoPlayer.OnPhotoPlayerListener.html" title="interface in com.samsung.multiscreen">PhotoPlayer.OnPhotoPlayerListener</a>&nbsp;listener)</pre>
@@ -432,6 +546,292 @@ extends <a href="../../../com/samsung/multiscreen/Player.html" title="class in c
 <dd><code>listener</code> - the message listener to invoke when a message is
                           received with the specified event</dd>
 </dl>
+</li>
+</ul>
+<a name="disconnect--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>disconnect</h4>
+<pre>public&nbsp;void&nbsp;disconnect()</pre>
+<div class="block">Disconnect from the specified channel.</div>
+</li>
+</ul>
+<a name="disconnect-com.samsung.multiscreen.Result-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>disconnect</h4>
+<pre>public&nbsp;void&nbsp;disconnect(<a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</pre>
+<div class="block">Disconnect from the specified channel.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>result</code> - the callback to invoke with the result of the disconnect request</dd>
+</dl>
+</li>
+</ul>
+<a name="disconnect-boolean-com.samsung.multiscreen.Result-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>disconnect</h4>
+<pre>public&nbsp;void&nbsp;disconnect(boolean&nbsp;stopOnDisconnect,
+                       <a href="../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;callback)</pre>
+<div class="block">Disconnect from the media player.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>stopOnDisconnect</code> - stop the media player application, if true. Otherwise, disconnect
+
+ and leave the media player application running.</dd>
+<dd><code>callback</code> - the callback to invoke with the result of the disconnect request</dd>
+</dl>
+</li>
+</ul>
+<a name="isConnected--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isConnected</h4>
+<pre>public&nbsp;boolean&nbsp;isConnected()</pre>
+<div class="block">Returns if the channel is connected and the host is ready to listen
+
+ for messages.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true, if connected and the host is ready. false, otherwise.</dd>
+</dl>
+</li>
+</ul>
+<a name="setOnConnectListener-com.samsung.multiscreen.Channel.OnConnectListener-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOnConnectListener</h4>
+<pre>public&nbsp;void&nbsp;setOnConnectListener(<a href="../../../com/samsung/multiscreen/Channel.OnConnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnConnectListener</a>&nbsp;onConnectListener)</pre>
+<div class="block">Set connect channel Listener</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>onConnectListener</code> - - the callback to invoke when Media Player is connected</dd>
+</dl>
+</li>
+</ul>
+<a name="setOnDisconnectListener-com.samsung.multiscreen.Channel.OnDisconnectListener-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOnDisconnectListener</h4>
+<pre>public&nbsp;void&nbsp;setOnDisconnectListener(<a href="../../../com/samsung/multiscreen/Channel.OnDisconnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnDisconnectListener</a>&nbsp;onDisconnectListener)</pre>
+<div class="block">Set disconnect channel Listener</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>onDisconnectListener</code> - - the callback to invoke when Media Player is disconnected</dd>
+</dl>
+</li>
+</ul>
+<a name="setOnClientConnectListener-com.samsung.multiscreen.Channel.OnClientConnectListener-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOnClientConnectListener</h4>
+<pre>public&nbsp;void&nbsp;setOnClientConnectListener(<a href="../../../com/samsung/multiscreen/Channel.OnClientConnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnClientConnectListener</a>&nbsp;onClientConnectListener)</pre>
+<div class="block">Set channel client connect Listener</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>onClientConnectListener</code> - - the callback to invoke when Media Player client is connected</dd>
+</dl>
+</li>
+</ul>
+<a name="setOnClientDisconnectListener-com.samsung.multiscreen.Channel.OnClientDisconnectListener-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOnClientDisconnectListener</h4>
+<pre>public&nbsp;void&nbsp;setOnClientDisconnectListener(<a href="../../../com/samsung/multiscreen/Channel.OnClientDisconnectListener.html" title="interface in com.samsung.multiscreen">Channel.OnClientDisconnectListener</a>&nbsp;onClientDisconnectListener)</pre>
+<div class="block">Set channel client disconnect Listener</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>onClientDisconnectListener</code> - - the callback to invoke when Media Player client is disconnected</dd>
+</dl>
+</li>
+</ul>
+<a name="setOnReadyListener-com.samsung.multiscreen.Channel.OnReadyListener-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOnReadyListener</h4>
+<pre>public&nbsp;void&nbsp;setOnReadyListener(<a href="../../../com/samsung/multiscreen/Channel.OnReadyListener.html" title="interface in com.samsung.multiscreen">Channel.OnReadyListener</a>&nbsp;OnReadyListener)</pre>
+<div class="block">Set ready channel Listener</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>OnReadyListener</code> - - the callback to invoke when Media Player channel is ready</dd>
+</dl>
+</li>
+</ul>
+<a name="setOnErrorListener-com.samsung.multiscreen.Channel.OnErrorListener-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOnErrorListener</h4>
+<pre>public&nbsp;void&nbsp;setOnErrorListener(<a href="../../../com/samsung/multiscreen/Channel.OnErrorListener.html" title="interface in com.samsung.multiscreen">Channel.OnErrorListener</a>&nbsp;onErrorListener)</pre>
+<div class="block">Remove all listeners from remote control channel.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>onErrorListener</code> - - the callback to invoke when Media Player channel has some error</dd>
+</dl>
+</li>
+</ul>
+<a name="resumeApplicationInForeground--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resumeApplicationInForeground</h4>
+<pre>public final&nbsp;void&nbsp;resumeApplicationInForeground()</pre>
+<div class="block">resumes TV widget/application from background process.</div>
+</li>
+</ul>
+<a name="play--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>play</h4>
+<pre>public&nbsp;void&nbsp;play()</pre>
+<div class="block">Play Content</div>
+</li>
+</ul>
+<a name="pause--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pause</h4>
+<pre>public&nbsp;void&nbsp;pause()</pre>
+<div class="block">Pause Content</div>
+</li>
+</ul>
+<a name="stop--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stop</h4>
+<pre>public&nbsp;void&nbsp;stop()</pre>
+<div class="block">Stop Content</div>
+</li>
+</ul>
+<a name="mute--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mute</h4>
+<pre>public&nbsp;void&nbsp;mute()</pre>
+<div class="block">Mute</div>
+</li>
+</ul>
+<a name="unMute--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>unMute</h4>
+<pre>public&nbsp;void&nbsp;unMute()</pre>
+<div class="block">Un-mute</div>
+</li>
+</ul>
+<a name="setVolume-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setVolume</h4>
+<pre>public&nbsp;void&nbsp;setVolume(int&nbsp;volume)</pre>
+<div class="block">sets the volume</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>volume</code> - - volume value in range 0 to 100 (%).</dd>
+</dl>
+</li>
+</ul>
+<a name="getControlStatus--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getControlStatus</h4>
+<pre>public&nbsp;void&nbsp;getControlStatus()</pre>
+<div class="block">fetches the control status - volume, mute, shuffle and repeat</div>
+</li>
+</ul>
+<a name="volumeUp--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>volumeUp</h4>
+<pre>public&nbsp;void&nbsp;volumeUp()</pre>
+<div class="block">Increases the volume by 1</div>
+</li>
+</ul>
+<a name="volumeDown--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>volumeDown</h4>
+<pre>public&nbsp;void&nbsp;volumeDown()</pre>
+<div class="block">Decreases the volume by 1</div>
+</li>
+</ul>
+<a name="previous--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>previous</h4>
+<pre>public&nbsp;void&nbsp;previous()</pre>
+<div class="block">Launch Previous Content</div>
+</li>
+</ul>
+<a name="next--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>next</h4>
+<pre>public&nbsp;void&nbsp;next()</pre>
+<div class="block">Launch Next Content</div>
+</li>
+</ul>
+<a name="setDebug-boolean-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDebug</h4>
+<pre>public&nbsp;void&nbsp;setDebug(boolean&nbsp;debug)</pre>
+<div class="block">Get whether debug is set.</div>
+</li>
+</ul>
+<a name="isDebug--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isDebug</h4>
+<pre>public&nbsp;boolean&nbsp;isDebug()</pre>
+<div class="block">Get whether debug is set.</div>
 </li>
 </ul>
 </li>

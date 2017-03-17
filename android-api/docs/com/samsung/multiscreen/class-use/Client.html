@@ -213,16 +213,15 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Application.</span><code><span class="memberNameLink"><a href="../../../../com/samsung/multiscreen/Application.html#disconnect-boolean-com.samsung.multiscreen.Result-">disconnect</a></span>(boolean&nbsp;stopOnDisconnect,
-          <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>
-<div class="block">Disconnect from the specified channel.</div>
-</td>
+<td class="colLast"><span class="typeNameLabel">Channel.</span><code><span class="memberNameLink"><a href="../../../../com/samsung/multiscreen/Channel.html#connect-android.net.Uri-java.util.Map-com.samsung.multiscreen.Result-">connect</a></span>(<a href="http://d.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</a>&nbsp;url,
+       <a href="http://d.android.com/reference/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;attributes,
+       <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../com/samsung/multiscreen/Player.html#disconnect-boolean-com.samsung.multiscreen.Result-">disconnect</a></span>(boolean&nbsp;stopOnDisconnect,
-          <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;callback)</code>
-<div class="block">Disconnect from the media player.</div>
+<td class="colLast"><span class="typeNameLabel">Application.</span><code><span class="memberNameLink"><a href="../../../../com/samsung/multiscreen/Application.html#disconnect-boolean-com.samsung.multiscreen.Result-">disconnect</a></span>(boolean&nbsp;stopOnDisconnect,
+          <a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>
+<div class="block">Disconnect from the specified channel.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -237,19 +236,13 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../com/samsung/multiscreen/Player.html#disconnect-com.samsung.multiscreen.Result-">disconnect</a></span>(<a href="../../../../com/samsung/multiscreen/Result.html" title="interface in com.samsung.multiscreen">Result</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;result)</code>
-<div class="block">Disconnect from the specified channel.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Channel.</span><code><span class="memberNameLink"><a href="../../../../com/samsung/multiscreen/Channel.html#publish-java.lang.String-java.lang.Object-java.util.List-">publish</a></span>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;event,
        <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;data,
        <a href="http://d.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../com/samsung/multiscreen/Client.html" title="class in com.samsung.multiscreen">Client</a>&gt;&nbsp;clients)</code>
 <div class="block">Send a message to the specified clients on this channel.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Channel.</span><code><span class="memberNameLink"><a href="../../../../com/samsung/multiscreen/Channel.html#publish-java.lang.String-java.lang.Object-java.util.List-byte:A-">publish</a></span>(<a href="http://d.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;event,
        <a href="http://d.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;data,

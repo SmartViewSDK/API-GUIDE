@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -184,90 +184,102 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#clearStandbyDeviceList--">clearStandbyDeviceList</a></span>()</code>
+<div class="block">Clears standby device list from the device.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="http://d.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../com/samsung/multiscreen/Service.html" title="class in com.samsung.multiscreen">Service</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#getServices--">getServices</a></span>()</code>
 <div class="block">The list of services found during the search process.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#isSearching--">isSearching</a></span>()</code>
 <div class="block">Returns if any search is in progress.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#isSearchingBle--">isSearchingBle</a></span>()</code>
 <div class="block">Returns if any BLE search is in progress.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#isSupportBle--">isSupportBle</a></span>()</code>
 <div class="block">Checks whether BLE is supported.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#removeAllProviders--">removeAllProviders</a></span>()</code>
 <div class="block">Remove all search providers.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#removeProvider-com.samsung.multiscreen.SearchProvider-">removeProvider</a></span>(<a href="../../../com/samsung/multiscreen/SearchProvider.html" title="class in com.samsung.multiscreen">SearchProvider</a>&nbsp;provider)</code>
 <div class="block">Removes the specified search provider</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#setOnBleFoundListener-com.samsung.multiscreen.Search.OnBleFoundListener-">setOnBleFoundListener</a></span>(<a href="../../../com/samsung/multiscreen/Search.OnBleFoundListener.html" title="interface in com.samsung.multiscreen">Search.OnBleFoundListener</a>&nbsp;onBleFoundListener)</code>
 <div class="block">Set the listener for service found events using BLE.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#setOnServiceFoundListener-com.samsung.multiscreen.Search.OnServiceFoundListener-">setOnServiceFoundListener</a></span>(<a href="../../../com/samsung/multiscreen/Search.OnServiceFoundListener.html" title="interface in com.samsung.multiscreen">Search.OnServiceFoundListener</a>&nbsp;onServiceFoundListener)</code>
 <div class="block">Set the listener for service found events.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#setOnServiceLostListener-com.samsung.multiscreen.Search.OnServiceLostListener-">setOnServiceLostListener</a></span>(<a href="../../../com/samsung/multiscreen/Search.OnServiceLostListener.html" title="interface in com.samsung.multiscreen">Search.OnServiceLostListener</a>&nbsp;onServiceLostListener)</code>
 <div class="block">Set the listener for service lost events.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#setOnStartListener-com.samsung.multiscreen.Search.OnStartListener-">setOnStartListener</a></span>(<a href="../../../com/samsung/multiscreen/Search.OnStartListener.html" title="interface in com.samsung.multiscreen">Search.OnStartListener</a>&nbsp;onStartListener)</code>
 <div class="block">Set the listener for start (search) events.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#setOnStopListener-com.samsung.multiscreen.Search.OnStopListener-">setOnStopListener</a></span>(<a href="../../../com/samsung/multiscreen/Search.OnStopListener.html" title="interface in com.samsung.multiscreen">Search.OnStopListener</a>&nbsp;onStopListener)</code>
 <div class="block">Set the listener for stop (search) events.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#start--">start</a></span>()</code>
 <div class="block">Start the search process.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#start-java.lang.Boolean-">start</a></span>(<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;showStandbyDevices)</code>
+<div class="block">Start the search process.</div>
+</td>
+</tr>
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#startUsingBle--">startUsingBle</a></span>()</code>
 <div class="block">Start the ble search process.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#stop--">stop</a></span>()</code>
 <div class="block">Stop the search process.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/samsung/multiscreen/Search.html#stopUsingBle--">stopUsingBle</a></span>()</code>
 <div class="block">Stop the search process.</div>
@@ -337,6 +349,22 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 </dl>
 </li>
 </ul>
+<a name="start-java.lang.Boolean-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>start</h4>
+<pre>public&nbsp;boolean&nbsp;start(<a href="http://d.android.com/reference/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;showStandbyDevices)</pre>
+<div class="block">Start the search process.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>showStandbyDevices</code> - optional argument to stop showing standby devices.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true, if started. false, otherwise.</dd>
+</dl>
+</li>
+</ul>
 <a name="stop--">
 <!--   -->
 </a>
@@ -349,6 +377,16 @@ extends <a href="http://d.android.com/reference/java/lang/Object.html?is-externa
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true, if stopped. false, otherwise.</dd>
 </dl>
+</li>
+</ul>
+<a name="clearStandbyDeviceList--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>clearStandbyDeviceList</h4>
+<pre>public&nbsp;void&nbsp;clearStandbyDeviceList()</pre>
+<div class="block">Clears standby device list from the device.</div>
 </li>
 </ul>
 <a name="isSupportBle--">
