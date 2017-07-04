@@ -1,7 +1,7 @@
 ## Welcome to SmartViewSDK
 
 ### Essential Contents 
-- [SmartView SDK Download](http://developer.samsung.com/tv/develop/tools/extension-libraries/smartview-sdk-download)
+- [SmartView SDK Download](http://developer.samsung.com/tv/develop/tools/extension-libraries/smart-view-sdk-download)
 - [Getting Started](http://developer.samsung.com/tv/develop/extension-libraries/smart-view-sdk/getting-started//)
 - [UX Guideline](http://developer.samsung.com/tv/design/smart-view-sdk/)
 - [Samples](http://developer.samsung.com/tv/develop/extension-libraries/smart-view-sdk/samples)
